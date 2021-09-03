@@ -4,7 +4,23 @@ function Courses() {
   return (
     <div className={curso.container}>
       <h1>CURSOS</h1>
-      <p>Parrafo de prueba</p>
+      <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
     </div>
   )
 }
