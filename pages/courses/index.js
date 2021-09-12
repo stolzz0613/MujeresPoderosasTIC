@@ -1,8 +1,7 @@
-import curso from '../../styles/courses.module.scss'
 
-function Courses() {
+function CoursesPage() {
   return (
-    <div className={curso.container}>
+    <div>
       <h1>CURSOS</h1>
       <table>
         <tr>
@@ -25,4 +24,4 @@ function Courses() {
   )
 }
 
-export default Courses
+export default CoursesPage
