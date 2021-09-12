@@ -6,7 +6,7 @@ function Header() {
         <div className={header.container}>
             <Link href='/'>
                 <div className={header.nameContainer}>
-                    <img className={header.logo} src='/logo.png' />
+                    <img className={header.logo} src='https://i.imgur.com/KHRZxOv.png' />
                     <h1>Mujeres Poderosas</h1>
                 </div>
             </Link>
