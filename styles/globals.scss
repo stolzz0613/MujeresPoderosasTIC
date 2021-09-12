@@ -1,11 +1,9 @@
-h1 {
-  color: red;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 
-table, th, td {
-  border:1px solid black;
-}
+$highlight: #C13B77;
+$main: #EDE8FF;
 
-p {
-  color: blue
-}
+$s: '430px';
+$m: '900px';
+$l: '1200px';
