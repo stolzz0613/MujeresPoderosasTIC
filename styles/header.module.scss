@@ -2,7 +2,7 @@
 
 .container {
     align-items: center;
-    background-color: $main;
+    background-color: $color-primary;
     display: flex;
     height: 100px;
     justify-content: space-between;
@@ -14,7 +14,7 @@
 
     .nameContainer {
         align-items: center;
-        color: $highlight;
+        color: $color-highlight;
         cursor: pointer;
         display:flex;
         font-family: 'Rochester', cursive;
@@ -42,12 +42,12 @@
 
     a {
         color: gray;
-        font-size: 20px;
+        font-size: 24px;
         padding-top: 10px;
         text-decoration: none;
 
         &:hover {
-            color: $highlight;
+            color: $color-highlight;
             font-weight: bold;
             font-size: 30px;
             transition: font-size 0.5s ease;
