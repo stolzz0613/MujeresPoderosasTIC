@@ -1,14 +1,10 @@
-import Link from 'next/link'
+import Team from '../components/Team';
 
 function Home() {
+
   return (
     <div>
-      <h1>Mujeres Poderosas</h1>
-      <h3>Cambio por Tatiana Garcia</h3>
-      <p>Esta es una pagina para mujeres, si eres hombre vete</p>
-      <Link href="/courses">
-        <a>To cursos..</a>
-      </Link>
+        <Team/>
     </div>
   )
 }

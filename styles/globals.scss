@@ -1,11 +1,30 @@
-h1 {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//Variables 
+$color-primary: #EDE8FF;
+$color-light: #FFFFFF;
+$color-highlight: #C13B77;
+$color-secondary: #41338B;
+$color-dark: #000000;
+$font-name:'Rochester', cursive;
+$font-titles:'Reem Kufi', sans-serif;
+$font-text:'Roboto', sans-serif;
+
+//mixins
+@mixin primary-title{
+    color: $color-secondary;
+    font-family: $font-titles;
+}
+@mixin secondary-title {
+    color:$color-dark;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 24px;
 }
 
-table, th, td {
-  border:1px solid black;
-}
 
-p {
-  color: blue
-}
+
+$s: '430px';
+$m: '900px';
+$l: '1200px';
