@@ -3,6 +3,33 @@ h1 {
     font-size: 36px;
     text-align: center;
     font-family: 'Reem Kufi', sans-serif;
-   
+}
 
+h2 {
+    color: #C13B77;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.parrafo {
+    padding: 30px;
+    text-align: justify;
+}
+
+.titulo {
+    padding: 40px 40px 40px 40px;
+    min-width: 30%;
+}
+.contenedor {
+    display: flex;
+    background-color: #F5F2FF;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
 }
