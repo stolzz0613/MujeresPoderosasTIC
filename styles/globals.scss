@@ -16,11 +16,24 @@ $font-text:'Roboto', sans-serif;
 @mixin primary-title{
     color: $color-secondary;
     font-family: $font-titles;
+    font-size: 36px;
+    text-decoration: none;
 }
-@mixin secondary-title {
+@mixin options-title {
     color:$color-dark;
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: $font-titles;
     font-size: 24px;
+}
+@mixin secondary-title{
+    color: $color-light;
+    font-family: $font-text;
+    text-transform: uppercase;
+}
+
+@mixin article-text{
+    color: $color-dark;
+    font-family: $font-text;
+    font-size: 18px;
 }
 
 

@@ -20,7 +20,7 @@
     a {
         text-decoration: none;
         word-spacing: 3px;
-        @include secondary-title;
+        @include options-title;
 
 
         &:hover {

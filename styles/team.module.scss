@@ -1,2 +1,70 @@
 @import 'globals';
 
+.container h1 {
+   padding-bottom: 40px;
+   text-align: center;
+   @include primary-title;
+}
+
+.container_images {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .container_image{
+        border-radius: 100px;
+        overflow: hidden;
+        height: 300px;
+        width: 202px;
+        position: relative;
+        
+        &:hover {
+            .container2 {
+                opacity: 80%;
+                transform: translateY(0%);
+                transition: all 0.5s ease-out;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            min-height: 100%;
+            object-fit: fill;
+        }
+
+    }
+}
+
+
+.container2 {
+    background-color: $color-dark;
+    position: absolute;
+    top: 0%;
+    opacity: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    transform: translateY(-105%);
+    p{
+        text-align: center;
+        color: $color-light;
+    }
+
+    .icon {
+        display:flex;
+        flex-direction: column;
+        padding: 15px;
+
+        i {
+            align-self: flex-end;
+            font-size: 30px;
+            color: $color-light;
+        }
+    }
+}
+
+

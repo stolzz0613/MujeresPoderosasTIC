@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import { AppWrapper } from '../context/globalState';
 import NavBar from '../components/NavBar';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function MyApp({ Component, pageProps }) {
   return (
