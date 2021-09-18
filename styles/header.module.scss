@@ -29,12 +29,12 @@
             padding-top: 10px;
 
             @media screen and (max-width: $s) {
-               font-size: 30px;
+                font-size: 30px;
             }
         }
 
         .logo {
-            height: 60px;
+            height: 100px;
             padding-right: 10px;
             width: auto;
         }
@@ -55,7 +55,9 @@
 
         @media screen and (max-width: $s) {
             display: none;
-        }
+        }    
     }
+
 }
+
 

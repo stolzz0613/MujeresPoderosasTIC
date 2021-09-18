@@ -6,15 +6,16 @@ function Header() {
         <div className={header.container}>
             <Link href='/'>
                 <div className={header.nameContainer}>
-                    <img className={header.logo} src='https://i.imgur.com/KHRZxOv.png' />
+                    <img className={header.logo} src='https://i.imgur.com/BE3YfRF.png' />
                     <h1>Mujeres Poderosas</h1>
                 </div>
             </Link>
             <Link href='/login'>
                 <a>Ingreso Admin</a>
-            </Link>
+            </Link>         
         </div>
     )
 }
 
 export default Header;
+
