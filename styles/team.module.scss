@@ -1,9 +1,9 @@
 @import 'globals';
 
 .container h1 {
-   padding-bottom: 40px;
-   text-align: center;
-   @include primary-title;
+    @include primary-title;
+    padding-bottom: 40px;
+    text-align: center;
 }
 
 .container_images {
@@ -18,7 +18,7 @@
         height: 300px;
         width: 202px;
         position: relative;
-        
+
         &:hover {
             .container2 {
                 opacity: 80%;

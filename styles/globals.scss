@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
-//Variables 
+//Variables
 $color-primary: #EDE8FF;
 $color-light: #FFFFFF;
 $color-highlight: #C13B77;
@@ -11,6 +12,7 @@ $color-dark: #000000;
 $font-name:'Rochester', cursive;
 $font-titles:'Reem Kufi', sans-serif;
 $font-text:'Roboto', sans-serif;
+$font-quote: 'Reenie Beanie', cursive;
 
 //mixins
 @mixin primary-title{
@@ -36,6 +38,11 @@ $font-text:'Roboto', sans-serif;
     font-size: 18px;
 }
 
+@mixin quote-text{
+    color: $color-dark;
+    font-family: $font-quote;
+    font-size: 30px;
+}
 
 
 $s: '430px';
