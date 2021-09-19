@@ -1,80 +1,65 @@
 import team from '../styles/team.module.scss';
+import DailyQuote from './DailyQuote';
 
 function Team() {
+
+    const people = [
+        {
+            name: 'JOHANA MAHUTH',
+            job: 'Product Owner',
+            img: 'https://i.imgur.com/935c8yF.jpg',
+            social: {
+                github: 'http://google.com',
+                linkedin: ''
+            }
+        },
+        {
+            name: 'ANGELICA ARRUBLA',
+            job: 'Developer Team',
+            img: 'https://i.imgur.com/onZUTAx.jpg'
+        },
+        {
+            name: 'ANDRES BUSTOS',
+            job: 'Scrum Master',
+            img: 'https://i.imgur.com/B4bCsyn.jpg'
+        },
+        {
+            name: 'SANDRA CASTELBLANCO',
+            job: 'Developer Team',
+            img: 'https://i.imgur.com/NnXz0zb.jpg'
+        },
+        {
+            name: 'TATIANA GARCIA',
+            job: 'Developer Team',
+            img: 'https://i.imgur.com/g5hXvXj.jpg'
+        },
+    ]
+
     return (
         <div className={team.container}>
             <h1>Equipo de Trabajo</h1>
             <div className={team.container_images}>
-                <div className={team.container_image}>
-                        <img src='https://i.imgur.com/935c8yF.jpg'/>
-                    <div className={team.container2}>
-                        <div className={team.icon}>
-                            <i class="bi bi-linkedin"></i>
-                            <i class="bi bi-github"></i>
+                {
+                    people.map( person => (
+                        <div className={team.container_image}>
+                            <img src={person.img}/>
+                            <div className={team.container2}>
+                                <div className={team.icon}>
+                                    <a href={person?.social?.github}>
+                                        <i className="bi bi-linkedin"></i>
+                                    </a>
+                                    <i className="bi bi-github"></i>
+                                </div>
+                                <div>
+                                    <p>{person.name}</p>
+                                    <p>{person.job}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p>JOHANNA MAHUTH</p>
-                            <p>Product owner </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={team.container_image}>
-                        <img src='https://i.imgur.com/onZUTAx.jpg'/>
-                    <div className={team.container2}>
-                        <div className={team.icon}>
-                            <i class="bi bi-linkedin"></i>
-                            <i class="bi bi-github"></i>
-                        </div>
-                        <div>
-                            <p>ANGELICA ARRUBLA</p>
-                            <p>Developer team </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={team.container_image}>
-                        <img src='https://i.imgur.com/B4bCsyn.jpg'/>
-                    <div className={team.container2}>
-                        <div className={team.icon}>
-                            <i class="bi bi-linkedin"></i>
-                            <i class="bi bi-github"></i>
-                        </div>
-                        <div>
-                            <p>ANDRES BUSTOS</p>
-                            <p>Scrum Master</p>
-                        </div>  
-                    </div>
-                </div>
-
-                <div className={team.container_image}>
-                        <img src='https://i.imgur.com/NnXz0zb.jpg'/>
-                    <div className={team.container2}>
-                        <div className={team.icon}>
-                            <i class="bi bi-linkedin"></i>
-                            <i class="bi bi-github"></i>
-                        </div>
-                        <div>
-                            <p>SANDRA CASTELBLANCO</p>
-                            <p>Developer team</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={team.container_image}>
-                        <img src='https://i.imgur.com/g5hXvXj.jpg'/>
-                    <div className={team.container2}>
-                        <div className={team.icon}>
-                            <i class="bi bi-linkedin"></i>
-                            <i class="bi bi-github"></i>
-                        </div>
-                        <div>
-                            <p>TATIANA GARCÍA</p>
-                            <p>Developer team</p>
-                        </div>  
-                    </div>
-                </div>  
-            </div>                
+                    ))
+                }
+            </div>
+            <DailyQuote />
         </div>
     )
 }
