@@ -1,3 +1,5 @@
+import Login from '../components/Login'
+
 function Home() {
 
   return (
