@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <AppWrapper>
