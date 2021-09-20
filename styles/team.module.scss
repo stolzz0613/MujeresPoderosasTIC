@@ -1,7 +1,15 @@
 @import 'globals';
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+}
+
 .container h1 {
     @include primary-title;
+
     padding-bottom: 40px;
     text-align: center;
 }

@@ -1,5 +1,14 @@
+@import 'globals';
+
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+
     h1 {
+        @include primary-title;
+
         color: #41338B;
         font-size: 36px;
         text-align: center;

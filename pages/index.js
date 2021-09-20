@@ -1,11 +1,14 @@
 import Team from '../components/Team';
-import Login from '../components/Login'
+import WhoWeAre from '../components/WhoWeAre';
+import Highlights from '../components/Highlights';
 
 function Home() {
 
   return (
     <div>
-        <Team/>
+      <WhoWeAre />
+      <Highlights />
+      <Team/>
     </div>
   )
 }
