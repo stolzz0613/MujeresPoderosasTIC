@@ -2,7 +2,7 @@
 
 .container {
     background-image: linear-gradient(
-        rgba(65, 51, 139, 0.77), 
+        rgba(65, 51, 139, 0.77),
         ),
     url(https://i.imgur.com/YCLWosZ.jpg);
     background-repeat: no-repeat;
@@ -26,27 +26,25 @@
         padding: 10px 0 10px 0;
 
 
-    .admin {
-        display: none;
-    }
-
-    a {
-        text-decoration: none;
-        word-spacing: 3px;
-        @include secondary-title;
-
-
-        &:hover {
-            text-decoration: solid underline $color-highlight 3px;
-            text-underline-offset: 5px;
-            color: inherit
+        .admin {
+            display: none;
         }
 
-        @media screen and (max-width: $s) {
-            display: block !important;
-            font-size: 10px;
+        a {
+            text-decoration: none;
+            word-spacing: 3px;
+            @include options-title;
+
+            &:hover {
+                text-decoration: solid underline $color-highlight 3px;
+                text-underline-offset: 5px;
+                color: inherit
+            }
+
+            @media screen and (max-width: $s) {
+                display: block !important;
+                font-size: 10px;
+            }
         }
     }
-}
-
 }
