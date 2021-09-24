@@ -1,7 +1,6 @@
 import navBar from '../styles/navBar.module.scss';
 import whoWeAre from '../styles/whoWeAre.module.scss';
 import highlights from '../styles/highlights.module.scss';
-import team from '../styles/team.module.scss';
 
 
 const NavBar = () => {
