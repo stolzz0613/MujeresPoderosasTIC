@@ -1,24 +1,21 @@
 import navBar from '../styles/navBar.module.scss';
-import Link from 'next/link';
+import whoWeAre from '../styles/whoWeAre.module.scss';
+import highlights from '../styles/highlights.module.scss';
+import team from '../styles/team.module.scss';
 
 
 const NavBar = () => {
+
+    const handleScroll = (name) => {
+        window.scrollTo(0, document.querySelector('.' + name).offsetTop);
+    }
     return (
         <div className={navBar.container}>
             <div className={navBar.topBar}>
-                <Link href='/'>
-                    <a>¿Quiénes somos?</a>
-                </Link>
-                <Link href='/'>
-                    <a>Destacados</a>
-                </Link>
-                <Link href='/'>
-                    <a>Equipo de trabajo</a>
-                </Link>
-                <Link href='/'>
-                    <a>Informate</a>
-                </Link>
-
+                <a href='#' onClick={() => handleScroll(whoWeAre.container)}>¿Quiénes somos?</a>
+                <a href='#' onClick={() => handleScroll(highlights.container)}>Destacados</a>
+                <a href='#' onClick={() => handleScroll(team.container)}>Equipo de trabajo</a>
+                <a href='#' onClick={() => handleScroll(whoWeAre.container)}>Informate</a>
             </div>
         </div>
 

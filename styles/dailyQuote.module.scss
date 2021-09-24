@@ -1,0 +1,9 @@
+@import 'globals';
+
+.container {
+    @include quote-text;
+
+    margin: 50px auto;
+    text-align: right;
+    width: 500px;
+}
