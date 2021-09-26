@@ -13,8 +13,9 @@ export function AppWrapper({ children }) {
   const [users, setUsers] = useState({})
 
   useEffect(() => {
-    setLoading(true)
-    axios.get('https://nameless-brushlands-25377.herokuapp.com/api/usuarios')
+    if (JSON.stringify(users) === '{}' && !loading) {
+      setLoading(true)
+      axios.get('https://nameless-brushlands-25377.herokuapp.com/api/usuarios')
       .then( res => {
         setUsers(res)
         setLoading(false)
@@ -22,9 +23,12 @@ export function AppWrapper({ children }) {
       .catch( res => {
         setLoading(false)
       })
+    }
 
-    const isLogged = localStorage.getItem('userLogged_MP')
-    isLogged ? setUserLogged(JSON.parse(isLogged)) : setUserLogged(JSON.parse({logged: false}))
+    if (!userLogged.logged) {
+      const isLogged = localStorage.getItem('userLogged_MP')
+      isLogged ? setUserLogged(JSON.parse(isLogged)) : setUserLogged({logged: false})
+    }
   }, [])
 
   return (
