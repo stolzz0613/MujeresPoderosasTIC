@@ -9,10 +9,7 @@
     h1 {
         @include primary-title;
 
-        color: #41338B;
-        font-size: 36px;
-        text-align: center;
-        font-family: 'Reem Kufi', sans-serif;
+        padding-left: 60px;
     }
 
     .container_text {
