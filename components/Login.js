@@ -2,6 +2,7 @@ import login from '../styles/login.module.scss'
 import {useAppContext} from '../context/globalState'
 import { useState } from 'react'
 
+import Router from 'next/router'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 
@@ -25,11 +26,20 @@ function Login({ isVisible }) {
                         logged: true
                     })
 
+                    localStorage.setItem('userLogged_MP', JSON.stringify({
+                        email: data.email,
+                        name: data.name,
+                        image: data.image,
+                        logged: true
+                    }))
+
                     Swal.fire(
                         'Bienvenido!',
                         'Iniciaste sesión',
                         'success'
                     )
+
+                    Router.push('/profile')
                 } else {
                     Swal.fire({
                         title: 'Error!',

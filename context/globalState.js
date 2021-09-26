@@ -20,9 +20,11 @@ export function AppWrapper({ children }) {
         setLoading(false)
       })
       .catch( res => {
-        console.log(res)
         setLoading(false)
       })
+
+    const isLogged = localStorage.getItem('userLogged_MP')
+    isLogged ? setUserLogged(JSON.parse(isLogged)) : setUserLogged(JSON.parse({logged: false}))
   }, [])
 
   return (

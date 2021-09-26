@@ -3,6 +3,7 @@ import {useAppContext} from '../context/globalState'
 import header from '../styles/header.module.scss'
 import Link from 'next/link'
 import Login from './Login'
+import Router from 'next/router'
 
 function Header() {
     const store = useAppContext()
@@ -18,7 +19,9 @@ function Header() {
             name: '',
             logged: false
         })
-        console.log(store)
+        localStorage.removeItem('userLogged_MP')
+        Router.push('/')
+
     }
 
     return (
