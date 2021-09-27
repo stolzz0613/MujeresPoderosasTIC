@@ -73,13 +73,13 @@ function index()  {
                         <div className={profile.data}>
                             <div style={{display: 'flex'}}>
                                 <i class="bi bi-card-list" style={{marginRight: '20px'}}></i>
-                                <p>Identificación <span>1032473848</span></p>
+                                <p>Identificación: <span>{store.userLogged.cc}</span></p>
                             </div>
                         </div>
                         <div className={profile.data}>
                             <div style={{display: 'flex'}}>
                                 <i class="bi bi-mailbox" style={{marginRight: '20px'}}></i>
-                                <p>Correo electronico <span>{store.userLogged.email}</span></p>
+                                <p>Correo electronico: <span>{store.userLogged.email}</span></p>
                             </div>
                         </div>
                     </div>

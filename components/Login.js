@@ -17,10 +17,12 @@ function Login({ isVisible }) {
             password: password
         } )
             .then( res => {
+                console.log(res)
                 let data = res.data.user
                 if ( data.logged ) {
                     store.setUserLogged({
                         email: data.email,
+                        cc: data.cc,
                         name: data.name,
                         image: data.image,
                         logged: true
@@ -28,6 +30,7 @@ function Login({ isVisible }) {
 
                     localStorage.setItem('userLogged_MP', JSON.stringify({
                         email: data.email,
+                        cc: data.cc,
                         name: data.name,
                         image: data.image,
                         logged: true

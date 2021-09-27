@@ -6,6 +6,7 @@ const AppContext = createContext();
 export function AppWrapper({ children }) {
   const [userLogged, setUserLogged] = useState({
     name: '',
+    cc: '',
     email: '',
     logged: false
   })

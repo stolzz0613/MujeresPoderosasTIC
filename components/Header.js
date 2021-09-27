@@ -17,6 +17,7 @@ function Header() {
         store.setUserLogged({
             email: '',
             name: '',
+            cc: '',
             logged: false
         })
         localStorage.removeItem('userLogged_MP')
@@ -40,7 +41,7 @@ function Header() {
                 : <>
                     <a onClick={handleLogout} id={header.title_login}>Cerrar sesión</a>
                     <Link href='/profile'>
-                        <a id={header.title_login}>Ver perfil</a>
+                        <a id={header.title_login}>{store.userLogged.name}</a>
                     </Link>
                   </>
             }
