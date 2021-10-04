@@ -3,7 +3,7 @@ import whoWeAre from '../styles/whoWeAre.module.scss'
 function WhoWeAre() {
     return (
         <div className={whoWeAre.container}>
-            <h1>Quienes Somos?</h1>
+            <h1>¿Quiénes Somos?</h1>
             <div className={whoWeAre.container_text}>
                 <div className={whoWeAre.secondary_title}>
                     <h2>Una Comunidad Social Colombiana que impacta la vida de las mujeres</h2>

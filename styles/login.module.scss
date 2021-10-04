@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'globals';
 
 .container {
     align-items: center;
-    background-color: #EDE8FF;
+    background-color: $color-primary;
     border: solid 2px black;
     border-radius: 10px;
     box-sizing: border-box;
@@ -19,28 +20,19 @@
     z-index: 10;
 
     .title {
-        font-family:'Reem Kufi';
-        font-size: 24px;
+        @include options-title;
+        
         word-spacing: 5px;
     }
 
     input {
-        background-color: #EDE8FF;
+        background-color:$color-light;
     }
 
     .submit {
-        background-color: #C13B77;
-        border: none;
-        border-radius: 10px;
-        color: white;
-        font-size: 20px;
+        @include button;
+
         height: 40px;
         width: 200px;
-
-        &:hover {
-            background-color: white;
-            color: #C13B77;
-            transition: all 0.5s ease-in;
-        }
     }
 }

@@ -31,9 +31,11 @@
         }
 
         a {
+            @include options-title;
+            
             text-decoration: none;
             word-spacing: 3px;
-            @include options-title;
+            
 
             &:hover {
                 text-decoration: solid underline $color-highlight 3px;

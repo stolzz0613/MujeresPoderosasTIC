@@ -18,31 +18,48 @@ $font-quote: 'Reenie Beanie', cursive;
 @mixin primary-title{
     color: $color-secondary;
     font-family: $font-titles;
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 50px;
     text-decoration: none;
+    text-align: center;
 }
 @mixin options-title {
     color:$color-dark;
     font-family: $font-titles;
-    font-size: 24px;
+    font-size: 18px;
 }
 @mixin secondary-title{
     color: $color-light;
     font-family: $font-text;
+    font-size: 30px;
     text-transform: uppercase;
 }
 
 @mixin article-text{
     color: $color-dark;
     font-family: $font-text;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 @mixin quote-text{
     color: $color-dark;
     font-family: $font-quote;
     font-size: 30px;
+}
+@mixin button {
+    background-color: $color-highlight;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-family: $font-text;
+
+    &:hover {
+        background-color: white;
+        color: #C13B77;
+        transition: all 0.5s ease-in;
+        border:solid 1px $color-dark;
+    }
 }
 
 

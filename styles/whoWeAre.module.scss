@@ -26,16 +26,15 @@
         }
 
         h2 {
-            color: #C13B77;
+            color: $color-highlight;
             text-align: left;
             font-size: 20px;
             font-weight: bold;
         }
 
         p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            color: black;
+            @include article-text;
+            
             margin-bottom: 10px;
         }
     }

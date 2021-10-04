@@ -9,16 +9,17 @@
     padding: 70px 50px 70px 50px;
 
     #title_login {
+        @include article-text;
+
         color: gray;
         cursor: pointer;
-        font-size: 24px;
-        padding-top: 10px;
+        padding-top: 18px;
         text-decoration: none;
 
         &:hover {
             color: $color-highlight;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 20px;
             transition: font-size 0.5s ease;
         }
 
@@ -44,7 +45,7 @@
         }
 
         h1 {
-            font-size: 60px;
+            font-size: 50px;
             padding-top: 10px;
 
             @media screen and (max-width: $s) {

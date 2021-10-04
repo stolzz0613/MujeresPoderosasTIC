@@ -6,7 +6,7 @@
     .photo {
         display: flex;
         height: 300px;
-        margin: -150px auto 20px;
+        margin: -150px auto 70px;
         width: 300px;
 
         img {
@@ -27,7 +27,7 @@
         margin-bottom: 100px;
         .data {
             display: flex;
-            background-color: #EDE8FF;
+            background-color: $color-primary;
             border: solid 1px;
             border-radius: 10px;
             justify-content: space-between;
@@ -51,20 +51,11 @@
         align-items: center;
 
         .submit {
-            background-color: #C13B77;
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-size: 20px;
+            @include button;
+            
             height: 50px;
             margin-bottom: 30px;
             width: 60%;
-
-            &:hover {
-                background-color: white;
-                color: #C13B77;
-                transition: all 0.5s ease-in;
-            }
 
             &:first-child {
                 margin-top: 50px;
