@@ -18,7 +18,7 @@
     }
 
     .topBar{
-        background-color: rgba(237, 232, 255, 0.87);
+        background-color: get-opacity($color-primary, 0.90);
         display: inline-flex;
         width: 100%;
         justify-content: space-around;
