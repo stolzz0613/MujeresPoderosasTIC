@@ -46,7 +46,6 @@ function index()  {
                     icon: 'error',
                     confirmButtonText: 'Cool'
                 })
-                console.log(res)
             })
         }
     }
