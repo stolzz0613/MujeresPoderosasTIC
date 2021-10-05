@@ -10,6 +10,7 @@ export function AppWrapper({ children }) {
     email: '',
     logged: false
   })
+  const [quotes, setquotes] = useState([])
   const [loading, setLoading] = useState(false)
   const [users, setUsers] = useState({})
 
@@ -32,12 +33,27 @@ export function AppWrapper({ children }) {
     }
   }, [])
 
+  useEffect(() => {
+    if (JSON.stringify(quotes) === '[]' && !loading) {
+      setLoading(true)
+      axios.get('https://nameless-brushlands-25377.herokuapp.com/api/google')
+      .then( res => {
+        setquotes([res.data])
+        setLoading(false)
+      })
+      .catch( res => {
+        setLoading(false)
+      })
+    }
+  }, [])
+
   return (
     <AppContext.Provider value={{
         userLogged,
         setUserLogged,
         loading,
         setLoading,
+        quotes,
         users
     }}>
       {children}

@@ -17,7 +17,7 @@ function Login({ isVisible }) {
             password: password
         } )
             .then( res => {
-                console.log(res)
+
                 let data = res.data.user
                 if ( data.logged ) {
                     store.setUserLogged({
@@ -53,7 +53,7 @@ function Login({ isVisible }) {
                 }
             })
             .catch( res => {
-                console.log(res)
+                (res)
             })
     }
 
