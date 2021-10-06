@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularioAdministrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <form class="form">
+        <div class="form_container">
+            <h1 class="form_title">Crear Publicación</h1>
+            <br><br><br>
+                <label for="categoria">Categoría</label>         
+                <select name="categoria" class="form_input">
+                    <option selected disabled="">seleccione la categoría para la publicación</option>
+                    <option value="">Noticias del Sector</option>
+                    <option value="">Web Recomendadas</option>
+                    <option value="">Convocatorias y Becas</option>
+                </select> <br>
+                <p>Título <input type="text"  class="form_input2" title="Título"> <br><br></p> 
+                            
+                <p>Link <input type="url" class="form_input2"  name="" id=""> <br><br></p>
+                
+                <label for="estado">Estado</label>         
+                <select name="estado" class="form_input">
+                    <option selected disabled="">seleccione un estado para la publicación</option>
+                    <option value="">en revisión</option>
+                    <option value="">publicada</option>
+                    <option value="">desactualizada</option>
+                </select> <br> <br><br><br>
+            
+        </div>
+        <input type="submit" value="Publicar" class="form_cta">
+
+    </form>
+    
+</body>
+</html>
