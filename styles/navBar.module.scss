@@ -1,4 +1,5 @@
 @import 'globals';
+@import 'breackpoints';
 
 .container {
     background-image: linear-gradient(
@@ -6,46 +7,51 @@
         ),
     url(https://i.imgur.com/YCLWosZ.jpg);
     background-repeat: no-repeat;
-    height: 600px;
-    width: 100%;
     background-size: 100% 100%;
     background-attachment: fixed;
+    height: 100px;
+    width: 100%; 
 
-    @media screen and (max-width: $s) {
-        flex-direction: column;
-        position: absolute;
-        right: 40%;
+    @include media(tablet){
+        height: 400px;
+        width: 100%; 
     }
+
 
     .topBar{
         background-color: get-opacity($color-primary, 0.90);
-        display: inline-flex;
+        display: grid;
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
         margin-top: 30px;
         padding: 10px 0 10px 0;
 
-
-        .admin {
-            display: none;
-        }
-
         a {
             @include options-title;
-            
+            font-size: 12px;
             text-decoration: none;
             word-spacing: 3px;
-            
+            text-align: center;
+            padding: 2px;
+        }
 
-            &:hover {
-                text-decoration: solid underline $color-highlight 3px;
-                text-underline-offset: 5px;
-                color: inherit
-            }
+        @include media(tablet){
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 10px 0 10px 0;
 
-            @media screen and (max-width: $s) {
-                display: block !important;
-                font-size: 10px;
+            a {
+                @include options-title;
+                text-decoration: none;
+                word-spacing: 3px;
+                
+                &:hover {
+                    text-decoration: solid underline $color-highlight 3px;
+                    text-underline-offset: 5px;
+                    color: inherit
+                }
             }
         }
     }

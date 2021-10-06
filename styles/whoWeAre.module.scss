@@ -1,15 +1,17 @@
 @import 'globals';
+@import 'breackpoints';
 
 .container {
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 400px;
-
+    align-items: center;
+    
     h1 {
         @include primary-title;
 
-        padding-left: 60px;
+        font-size: 20px;
+        margin-top: 40px;
     }
 
     .container_text {
@@ -28,14 +30,40 @@
         h2 {
             color: $color-highlight;
             text-align: left;
-            font-size: 20px;
+            font-size: 10px;
             font-weight: bold;
         }
 
         p {
             @include article-text;
-            
-            margin-bottom: 10px;
+            font-size: 10px;
+        }
+
+        @include media(tablet) {
+
+            h2 {
+                color: $color-highlight;
+                text-align: left;
+                font-size: 20px;
+                font-weight: bold;
+            }
+    
+            p {
+                @include article-text;
+                
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @include media(tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 400px;
+
+        h1 {
+            @include primary-title;
         }
     }
 }

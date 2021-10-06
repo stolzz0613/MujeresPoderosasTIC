@@ -1,4 +1,5 @@
 @import 'globals';
+@import 'breackpoints';
 
 .container {
     align-items: center;
@@ -9,27 +10,24 @@
     padding: 70px 50px 70px 50px;
 
     #title_login {
-        @include article-text;
+        
+        /*FALTA ICONO*/
+        @include media(tablet){
+            @include article-text;
 
-        color: gray;
-        cursor: pointer;
-        padding-top: 18px;
-        text-decoration: none;
+            display: flex;
+            color: gray;
+            cursor: pointer;
+            padding-top: 18px;
+            text-decoration: none;
 
-        &:hover {
-            color: $color-highlight;
-            font-weight: bold;
-            font-size: 20px;
-            transition: font-size 0.5s ease;
+            &:hover {
+                color: $color-highlight;
+                font-weight: bold;
+                font-size: 20px;
+                transition: font-size 0.5s ease;
+             }
         }
-
-        @media screen and (max-width: $s) {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: $s) {
-        padding: 10px 10px 10px 10px;
     }
 
     .nameContainer {
@@ -45,20 +43,24 @@
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 30px;
             padding-top: 10px;
 
-            @media screen and (max-width: $s) {
-                font-size: 30px;
+            @include media(tablet){
+                font-size: 40px;
             }
         }
 
         .logo {
-            height: 100px;
+            height: 50px;
             padding-right: 10px;
             width: auto;
+
+            @include media(tablet){
+                height: 100px;
+                width: auto;
+            }
         }
+
     }
 }
-
-

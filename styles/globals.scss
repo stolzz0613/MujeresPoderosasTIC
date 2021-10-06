@@ -19,7 +19,7 @@ $font-quote: 'Reenie Beanie', cursive;
     color: $color-secondary;
     font-family: $font-titles;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-decoration: none;
     text-align: center;
 }
@@ -67,7 +67,3 @@ $font-quote: 'Reenie Beanie', cursive;
 @function get-opacity($color,$nivel){
     @return rgba($color,$nivel);
 }
-
-$s: '430px';
-$m: '900px';
-$l: '1200px';

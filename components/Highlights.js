@@ -1,81 +1,35 @@
-import { useState, useEffect, useCallback  } from 'react'
-import { useEmblaCarousel } from 'embla-carousel/react'
-import { DotButton, PrevButton, NextButton } from './Carrousel/Buttons';
 import highlights from '../styles/highlights.module.scss'
 
 function Highlights() {
 
-    const slides = [
-        'https://mintic.gov.co/portal/715/articles-179154_foto_marquesina.jpg',
-        'https://mintic.gov.co/portal/715/articles-181711_foto_marquesina.png',
-        'https://mintic.gov.co/portal/715/articles-181774_foto_marquesina.png',
-        'https://mintic.gov.co/portal/715/articles-179154_foto_marquesina.jpg',
-        'https://mintic.gov.co/portal/715/articles-181711_foto_marquesina.png',
-        'https://mintic.gov.co/portal/715/articles-181774_foto_marquesina.png',
-        'https://mintic.gov.co/portal/715/articles-179154_foto_marquesina.jpg',
-        'https://mintic.gov.co/portal/715/articles-181711_foto_marquesina.png',
-        'https://mintic.gov.co/portal/715/articles-181774_foto_marquesina.png',
-    ]
-
-    const [viewportRef, embla] = useEmblaCarousel({
-      dragFree: true,
-      containScroll: "trimSnaps"
-    });
-
-    const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-    const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-    const [scrollSnaps, setScrollSnaps] = useState([]);
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
-    const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
-    const scrollTo = useCallback((index) => embla && embla.scrollTo(index), [
-        embla
-    ]);
-
-    const onSelect = useCallback(() => {
-      if (!embla) return;
-      setSelectedIndex(embla.selectedScrollSnap());
-      setPrevBtnEnabled(embla.canScrollPrev());
-      setNextBtnEnabled(embla.canScrollNext());
-    }, [embla, setSelectedIndex]);
-
-    useEffect(() => {
-      if (!embla) return;
-      embla.on("select", onSelect);
-      setScrollSnaps(embla.scrollSnapList());
-      onSelect();
-    }, [embla, setScrollSnaps, onSelect]);
-
     return (
         <div className={highlights.container}>
             <h1>Destacados</h1>
-            <div className={highlights.embla}>
-                <div className={highlights.embla__viewport} ref={viewportRef}>
-                <div className={highlights.embla__container}>
-                    {slides.map((index) => (
-                    <div className={highlights.embla__slide} key={index}>
-                        <div className={highlights.embla__slide__inner}>
-                        <img
-                            className={highlights.embla__slide__img}
-                            src={index}
-                            alt="A cool cat."
-                        />
-                        </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src='https://mintic.gov.co/portal/715/articles-179154_foto_marquesina.jpg' class="d-block w-100" alt="..."/>
                     </div>
-                    ))}
+                    <div class="carousel-item">
+                    <img src='https://mintic.gov.co/portal/715/articles-181711_foto_marquesina.png' class="d-block w-100" alt="..."/>
+                    </div>
+                    <div class="carousel-item">
+                    <img src='https://mintic.gov.co/portal/715/articles-181774_foto_marquesina.png' class="d-block w-100" alt="..."/>
+                    </div>
                 </div>
-                </div>
-                <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-                <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-            </div>
-            <div className={highlights.embla__dots}>
-                {scrollSnaps.map((_, index) => (
-                    <DotButton
-                    key={index}
-                    selected={index === selectedIndex}
-                    onClick={() => scrollTo(index)}
-                    />
-                ))}
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     )

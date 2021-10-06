@@ -1,9 +1,17 @@
 @import 'globals';
+@import 'breackpoints';
 
 .container {
     @include quote-text;
 
-    margin: 50px auto;
+    font-size: smaller;
+    margin: 40px auto;
     text-align: right;
-    width: 500px;
+    width: 200px;
+
+    @include media(tablet){
+        @include quote-text;
+        
+        width: 500px;
+    }
 }
