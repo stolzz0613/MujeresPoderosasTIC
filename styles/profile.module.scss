@@ -1,13 +1,14 @@
 @import 'globals';
+@import 'breackpoints';
 
 .container {
     padding: 0 80px 0 80px;
 
     .photo {
         display: flex;
-        height: 300px;
-        margin: -150px auto 70px;
-        width: 300px;
+        height: 200px;
+        margin:20px auto 40px;
+        width: 200px;
 
         img {
             border-radius: 50%;
@@ -20,6 +21,7 @@
     .title {
         h1 {
             @include primary-title;
+            font-size: 20px;
         }
     }
 
@@ -32,12 +34,13 @@
             border-radius: 10px;
             justify-content: space-between;
             margin: 10px 0 10px;
-            padding: 5px 40px 5px 40px;
+            padding: 3px 2px 2px 2px;
             width: 100%;
 
             p {
                 font-weight: bold;
                 margin-bottom: 0;
+                font-size: 9px;
                 span {
                     font-weight: normal;
                 }
@@ -52,10 +55,11 @@
 
         .submit {
             @include button;
+            font-size: 10px;
             
-            height: 50px;
+            height: 30px;
             margin-bottom: 30px;
-            width: 60%;
+            width: 80%;
 
             &:first-child {
                 margin-top: 50px;
@@ -63,6 +67,41 @@
 
             &:last-child {
                 margin-bottom: 300px;
+            }
+        }
+    }
+
+    @include media(tablet){
+
+        .photo {
+            display: flex;
+            height: 300px;
+            margin: -150px auto 70px;
+            width: 300px;
+        }
+
+        .title {
+            h1 {
+                @include primary-title;
+            }
+        }
+
+        .info {
+            
+            .data {
+
+                p {
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .buttons {
+
+            .submit {
+                @include button;
             }
         }
     }

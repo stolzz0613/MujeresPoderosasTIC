@@ -9,14 +9,28 @@
     justify-content: space-between;
     padding: 70px 50px 70px 50px;
 
+    #icon_login {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 25px;
+        color: $color-highlight;
+        padding-top: 10px;
+        
+        @include media(desktop-s){
+            display: none;
+        }
+    }
+
     #title_login {
         
-        /*FALTA ICONO*/
-        @include media(tablet){
+        display: none;
+
+        @include media(desktop-s){
             @include article-text;
 
             display: flex;
-            color: gray;
+            color: $color-highlight;
             cursor: pointer;
             padding-top: 18px;
             text-decoration: none;
@@ -43,20 +57,20 @@
         }
 
         h1 {
-            font-size: 30px;
+            font-size: 25px;
             padding-top: 10px;
 
-            @include media(tablet){
+            @include media(desktop-s){
                 font-size: 40px;
             }
         }
 
         .logo {
-            height: 50px;
+            height: 30px;
             padding-right: 10px;
             width: auto;
 
-            @include media(tablet){
+            @include media(desktop-s){
                 height: 100px;
                 width: auto;
             }

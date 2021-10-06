@@ -35,6 +35,7 @@ function Header() {
             </Link>
             { !store.userLogged.logged
                 ? <>
+                    <i id={header.icon_login}class="bi bi-person-circle" onClick={openLogin}></i>
                     <a id={header.title_login} onClick={openLogin} >Ingreso Admin</a>
                     <Login isVisible={isVisible}/>
                   </>

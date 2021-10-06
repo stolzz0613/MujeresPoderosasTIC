@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import 'globals';
+@import 'breackpoints';
 
 .container {
     align-items: center;
@@ -11,19 +12,19 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 370px;
+    height: 320px;
     justify-content: space-around;
     padding: 30px;
     position: absolute;
     right: 20px;
     top: 100px;
-    width: 300px;
+    width: 250px;
     z-index: 10;
 
     .title {
         @include options-title;
-        
-        word-spacing: 5px;
+        font-size: 15px;
+        word-spacing: 3px;
     }
 
     input {
@@ -32,8 +33,28 @@
 
     .submit {
         @include button;
-
-        height: 40px;
-        width: 200px;
+        font-size: 10px;
+        height: 20px;
+        width: 100px;
     }
+
+    @include media(desktop-s){
+        height: 370px;
+        width: 300px;
+
+        .title {
+            @include options-title;
+            
+            word-spacing: 5px;
+        }
+
+        .submit {
+            @include button;
+            height: 40px;
+            width: 200px;
+        }
+
+    }
+
+        
 }

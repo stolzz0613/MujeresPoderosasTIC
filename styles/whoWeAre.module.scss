@@ -39,7 +39,7 @@
             font-size: 10px;
         }
 
-        @include media(tablet) {
+        @include media(desktop-s) {
 
             h2 {
                 color: $color-highlight;
@@ -56,7 +56,7 @@
         }
     }
 
-    @include media(tablet) {
+    @include media(desktop-s) {
         display: flex;
         flex-direction: column;
         justify-content: center;

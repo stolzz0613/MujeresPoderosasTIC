@@ -2,7 +2,6 @@
 @import 'breackpoints';
 
 .container {
-    align-items: stretch;
     background-color: #41338b;
     color: #F5F2FF;
     display: flex;
@@ -22,28 +21,37 @@
             width: 100px;
         }
     }
+    .column2, .column3{
+        display: none;
+    }
+
     .column4{
-        align-self: flex-start;
-        max-width: 20%;
+        text-align: center;
+        display: grid;
+        max-width: 50%;
 
         i {
             color: #F5F2FF;
             font-family: $font-text;
             font-size: 10px;
+            
         }
 
         a{
-            
             color: $color-light;
         }
 
         .social {
             display: flex;
-            gap: 10px
+            gap: 30px;
         }
     }
-
-    @include media(tablet) {
+    
+    @include media(desktop-s) {
+        align-items: stretch;
+        background-color: #41338b;
+        color: #F5F2FF;
+        display: flex;
         font-size: 12px;
         justify-content: space-between;
         gap: 30px;
@@ -59,7 +67,14 @@
                 width: 200px;
             }
         }
+        .column2, .column3{
+            display: flex;
+            text-align: center;
+            display: grid;
+            
+        }
         .column4{
+            
             i {
                 color: #F5F2FF;
                 font-family: $font-text;
@@ -68,7 +83,8 @@
     
             .social {
                 display: flex;
-                gap: 15px
+                gap: 20px;
+                justify-content: space-between;
             }
         }
     }
