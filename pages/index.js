@@ -1,7 +1,6 @@
 import Team from '../components/Team';
 import WhoWeAre from '../components/WhoWeAre';
-import Highlights from '../components/Highlights';
-import News from '../components/news';
+import HomeCarousel from '../components/Carousel';
 
 function Home() {
 
@@ -9,7 +8,7 @@ function Home() {
     <div>
       <News/>
       <WhoWeAre />
-      <Highlights />
+      <HomeCarousel />
       <Team/>
     </div>
   )
