@@ -6,7 +6,6 @@ function Home() {
 
   return (
     <div>
-      <h1>checkign</h1>
       <WhoWeAre />
       <HomeCarousel />
       <Team/>
