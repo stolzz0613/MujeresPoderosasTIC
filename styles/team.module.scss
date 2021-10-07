@@ -2,9 +2,7 @@
 @import 'breackpoints';
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .container {@extend .container};
 
     h1 {
         @include primary-title;

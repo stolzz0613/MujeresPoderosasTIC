@@ -4,14 +4,15 @@
 .container {
     @include quote-text;
 
-    font-size: smaller;
+    font-size: 10px;
     margin: 40px auto;
     text-align: right;
     width: 200px;
 
     @include media(desktop-s){
         @include quote-text;
-        
-        width: 500px;
+
+        font-size: 20px;
+        width: 600px;
     }
 }

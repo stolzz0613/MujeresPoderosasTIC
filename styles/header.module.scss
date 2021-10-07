@@ -39,9 +39,30 @@
                 color: $color-highlight;
                 font-weight: bold;
                 font-size: 20px;
-                transition: font-size 0.5s ease;
              }
         }
+    }
+
+    #title_logout{
+        @include article-text;
+        font-size: 10px;
+        display: flex;
+        cursor: pointer;
+
+        @include media(tablet){
+            @include article-text;
+            padding-top: 18px;
+            padding-right: 30px;
+            margin-left: 500px;
+
+            &:hover {
+                color: $color-highlight;
+                font-weight: bold;
+                font-size: 20px;
+             }
+            
+        }
+
     }
 
     .nameContainer {

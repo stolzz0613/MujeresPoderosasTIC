@@ -40,7 +40,7 @@ function Header() {
                     <Login isVisible={isVisible}/>
                   </>
                 : <>
-                    <a onClick={handleLogout} id={header.title_login}>Cerrar sesión</a>
+                    <a onClick={handleLogout} id={header.title_logout}>Cerrar sesión</a>
                     <Link href='/profile'>
                         <a id={header.title_login}>{store.userLogged.name}</a>
                     </Link>
