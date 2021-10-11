@@ -1,0 +1,31 @@
+@import 'globals';
+@import 'breakpoints';
+
+
+
+.container {
+    margin: 100px 0 200px 0;
+    &_cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px 30px;
+    }
+
+    h1 {
+        @include primary-title;
+
+        margin-top: 100px;
+    }
+}
+
+.tag {
+    color: $color-primary;
+    border-radius: 10px;
+    background-color: $color-highlight;
+    width: fit-content;
+    padding: 3px 10px 3px 10px;
+    position: absolute;
+    top: 10px;
+}

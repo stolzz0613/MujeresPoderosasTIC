@@ -1,0 +1,32 @@
+@import 'globals';
+@import 'breakpoints';
+
+.form {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 auto 0 auto;
+    row-gap: 20px;
+    width: 50%;
+
+    label {
+        margin-top: auto;
+    }
+
+    input, select {
+        border-radius: 5px;
+    }
+}
+
+.button {
+    text-align: center;
+    margin: 50px 0 50px;
+
+    &_submit {
+        @include button;
+        font-size: 10px;
+        height: 30px;
+        margin-bottom: 30px;
+        width: 100px;
+    }
+}

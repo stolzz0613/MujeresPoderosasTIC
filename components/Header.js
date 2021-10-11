@@ -35,11 +35,12 @@ function Header() {
             </Link>
             { !store.userLogged.logged
                 ? <>
+                    <i id={header.icon_login}class="bi bi-person-circle" onClick={openLogin}></i>
                     <a id={header.title_login} onClick={openLogin} >Ingreso Admin</a>
                     <Login isVisible={isVisible}/>
                   </>
                 : <>
-                    <a onClick={handleLogout} id={header.title_login}>Cerrar sesión</a>
+                    <a onClick={handleLogout} id={header.title_logout}>Cerrar sesión</a>
                     <Link href='/profile'>
                         <a id={header.title_login}>{store.userLogged.name}</a>
                     </Link>

@@ -1,13 +1,14 @@
 @import 'globals';
+@import 'breakpoints';
 
 .container {
     padding: 0 80px 0 80px;
 
     .photo {
         display: flex;
-        height: 300px;
-        margin: -150px auto 20px;
-        width: 300px;
+        height: 200px;
+        margin:20px auto 40px;
+        width: 200px;
 
         img {
             border-radius: 50%;
@@ -20,6 +21,7 @@
     .title {
         h1 {
             @include primary-title;
+            font-size: 20px;
         }
     }
 
@@ -27,17 +29,18 @@
         margin-bottom: 100px;
         .data {
             display: flex;
-            background-color: #EDE8FF;
+            background-color: $color-primary;
             border: solid 1px;
             border-radius: 10px;
             justify-content: space-between;
             margin: 10px 0 10px;
-            padding: 5px 40px 5px 40px;
+            padding: 3px 15px 3px 15px;
             width: 100%;
 
             p {
                 font-weight: bold;
                 margin-bottom: 0;
+                font-size: 9px;
                 span {
                     font-weight: normal;
                 }
@@ -49,29 +52,44 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 50px 0 300px;
 
         .submit {
-            background-color: #C13B77;
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-size: 20px;
-            height: 50px;
+            @include button;
+            font-size: 10px;
+
+            height: 30px;
             margin-bottom: 30px;
             width: 60%;
+        }
+    }
 
-            &:hover {
-                background-color: white;
-                color: #C13B77;
-                transition: all 0.5s ease-in;
+    @include media(tablet){
+
+        .photo {
+            display: flex;
+            height: 300px;
+            margin: -150px auto 70px;
+            width: 300px;
+        }
+
+        .title {
+            h1 {
+                @include primary-title;
             }
+        }
 
-            &:first-child {
-                margin-top: 50px;
+        .info .data {
+            p {
+                font-weight: bold;
+                margin-bottom: 0;
+                font-size: 14px;
             }
+        }
 
-            &:last-child {
-                margin-bottom: 300px;
+        .buttons {
+            .submit {
+                @include button;
             }
         }
     }

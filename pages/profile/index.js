@@ -1,6 +1,7 @@
 import React from 'react'
 import profile from '../../styles/profile.module.scss'
 import {useAppContext} from '../../context/globalState'
+import Link from 'next/link'
 
 import Swal from 'sweetalert2'
 import axios from 'axios'
@@ -63,20 +64,20 @@ function index()  {
                     </div>
                     <div className={profile.info}>
                         <div className={profile.data}>
-                            <div style={{display: 'flex'}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
                                 <i class="bi bi-person-circle" style={{marginRight: '20px'}}></i>
                                 <p>Nombre y apellido: <span>{store.userLogged.name}</span></p>
                             </div>
                             <i onClick={handleEdit} class="bi bi-pen-fill" style={{alignSelf: 'flex-end', color: '#C13B77'}}></i>
                         </div>
                         <div className={profile.data}>
-                            <div style={{display: 'flex'}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
                                 <i class="bi bi-card-list" style={{marginRight: '20px'}}></i>
                                 <p>Identificación: <span>{store.userLogged.cc}</span></p>
                             </div>
                         </div>
                         <div className={profile.data}>
-                            <div style={{display: 'flex'}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
                                 <i class="bi bi-mailbox" style={{marginRight: '20px'}}></i>
                                 <p>Correo electronico: <span>{store.userLogged.email}</span></p>
                             </div>
@@ -86,8 +87,12 @@ function index()  {
                         <h1>Administración de publicaciones</h1>
                     </div>
                     <div className={profile.buttons}>
-                        <button className={profile.submit}>Crear publicación</button>
-                        <button className={profile.submit}>Editar o eliminar publicación</button>
+                        <Link href={{ pathname: '/profile/publish', query: {type: 'create'}}}>
+                            <button className={profile.submit}>Crear publicación</button>
+                        </Link>
+                        <Link href={{ pathname: '/profile/publish', query: {type: 'edit'}}}>
+                            <button className={profile.submit}>Editar o eliminar publicación</button>
+                        </Link>
                     </div>
                   </>
             }
