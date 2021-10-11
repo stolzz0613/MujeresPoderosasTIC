@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import newsStyle from '../../styles/news.module.scss'
-import Card from './Card'
+import Card from '../../components/Card'
 
 function index() {
     const [news, setnews] = useState([])
