@@ -148,7 +148,7 @@ function index() {
     }
 
     return (
-        <div>
+        <div className={publish.container}>
             <h1>{title}</h1>
             <div className={publish.form}>
 
@@ -195,8 +195,8 @@ function index() {
                 {
                     params?.type === 'edit'
                         ? <>
-                            <button className={publish.button_submit} onClick={handleEdit}>Editar</button>
-                            <button className={publish.button_submit} onClick={handleDelete}>Eliminar</button>
+                            <button className={publish.button_delete} onClick={handleDelete}>Eliminar</button>
+                            <button className={publish.button_edit} onClick={handleEdit}>Editar</button>
                         </>
                         : <button className={publish.button_submit} onClick={sendForm}>Publicar</button>
                 }

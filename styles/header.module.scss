@@ -11,7 +11,7 @@
 
     #icon_login {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         cursor: pointer;
         font-size: 25px;
         color: $color-highlight;
@@ -25,14 +25,20 @@
     #title_login {
 
         display: none;
+        justify-content: end;
+        align-items: flex-end;
+        padding: 0px 0px 10px 500px;
+       
 
         @include media(desktop-s){
             @include article-text;
-
+            color: gray;
             display: flex;
             cursor: pointer;
             padding-top: 18px;
             text-decoration: none;
+            
+        
 
             &:hover {
                 color: $color-highlight;
@@ -41,6 +47,19 @@
                 transition: all 0.5s ease-in
              }
         }
+    }
+
+    #icon_logout{
+
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        font-size: 20px;
+        color: $color-highlight;
+        padding-top: 10px;
+        margin-left: 5px;
+        text-decoration: none;
+        
     }
 
     #title_logout{

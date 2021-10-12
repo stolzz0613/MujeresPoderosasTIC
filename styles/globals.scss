@@ -52,13 +52,13 @@ $font-quote: 'Reenie Beanie', cursive;
     border: none;
     border-radius: 10px;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     font-family: $font-text;
 
     &:hover {
         background-color: white;
         color: #C13B77;
-        transition: all 0.5s ease-in;
+        transition: all 0.3s ease-in;
         border:solid 1px $color-dark;
     }
 }

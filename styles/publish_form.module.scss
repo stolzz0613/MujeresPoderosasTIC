@@ -1,32 +1,81 @@
 @import 'globals';
 @import 'breakpoints';
+.container{
 
-.form {
-    column-gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 0 auto 0 auto;
-    row-gap: 20px;
-    width: 50%;
+    h1 {
+        @include primary-title;
 
-    label {
-        margin-top: auto;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    
+    .form {
+        @include article-text;
+
+        column-gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin: 0 auto 0 auto;
+        row-gap: 20px;
+        width: 50%;
+        
+    
+        label {
+            margin-top: auto;
+        }
+    
+        input, select {
+            border-radius: 5px;
+            border: solid 1px $color-secondary;
+            background-color: $color-primary; 
+        }
+    }
+    
+    .button {
+        text-align: center;
+        margin: 50px 0 50px;
+    
+        &_submit {
+            @include button;
+            font-size: 10px;
+            height: 30px;
+            width: 150px; 
+        }
+        &_delete{
+            @include button;
+            background-color: $color-primary;
+            border: solid 1px $color-highlight;
+            color: $color-dark;
+            font-size: 10px;
+            height: 30px;
+            width: 150px; 
+            margin: 20px; 
+        }
+        &_edit{
+            @include button;
+            font-size: 10px;
+            height: 30px;
+            width: 150px;
+            margin: 20px;
+        }
     }
 
-    input, select {
-        border-radius: 5px;
-    }
-}
-
-.button {
-    text-align: center;
-    margin: 50px 0 50px;
-
-    &_submit {
-        @include button;
-        font-size: 10px;
-        height: 30px;
-        margin-bottom: 30px;
-        width: 100px;
+    @include media(tablet){
+        .button {
+            &_submit {
+                @include button;
+            }
+            &_delete{
+                @include button;
+                background-color: $color-primary;
+                border: solid 1px $color-highlight;
+                color: $color-dark;
+                margin: 20px; 
+            }
+            &_edit{
+                @include button;
+                margin: 20px;
+            }
+        }
     }
 }
