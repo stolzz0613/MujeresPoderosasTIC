@@ -11,6 +11,7 @@ function index() {
     const [title, settitle] = useState('');
     const [ownNews, setownNews] = useState([]);
     const [id, setid] = useState('');
+    const [screen, setscreen] = useState(0);
     const [dataForm, setdataForm] = useState({
         titulo: '',
         linkNoticia: '',
@@ -26,6 +27,7 @@ function index() {
 
     useEffect(() => {
         getOwnNews()
+        setscreen(window.innerWidth)
     }, [])
 
     useEffect(() => {
@@ -170,7 +172,10 @@ function index() {
                                 {
                                     ownNews.map( e =>
                                         <option value={e._id}>
-                                            {e.titulo}
+                                            {screen <= 450
+                                                ? e.titulo.length > 30 ? e.titulo.slice(0, 30) + '...' : e.titulo
+                                                : e.titulo
+                                            }
                                         </option>
                                     )
                                 }
