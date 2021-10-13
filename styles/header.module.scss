@@ -1,4 +1,5 @@
 @import 'globals';
+@import 'breakpoints';
 
 .container {
     align-items: center;
@@ -12,27 +13,78 @@
     box-sizing: border-box;
     
 
-    #title_login {
-        color: gray;
+    #icon_login {
+        display: flex;
+        align-items: flex-end;
         cursor: pointer;
-        font-size: 24px;
+        font-size: 25px;
+        color: $color-highlight;
         padding-top: 10px;
-        text-decoration: none;
 
-        &:hover {
-            color: $color-highlight;
-            font-weight: bold;
-            font-size: 30px;
-            transition: font-size 0.5s ease;
-        }
-
-        @media screen and (max-width: $s) {
+        @include media(desktop-s){
             display: none;
         }
     }
 
-    @media screen and (max-width: $s) {
-        padding: 10px 10px 10px 10px;
+    #title_login {
+
+        display: none;
+        justify-content: end;
+        align-items: flex-end;
+        padding: 0px 0px 10px 500px;
+       
+
+        @include media(desktop-s){
+            @include article-text;
+            color: gray;
+            display: flex;
+            cursor: pointer;
+            padding-top: 18px;
+            text-decoration: none;
+            
+        
+
+            &:hover {
+                color: $color-highlight;
+                font-weight: bold;
+                font-size: 20px;
+                transition: all 0.5s ease-in
+             }
+        }
+    }
+
+    #icon_logout{
+
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        font-size: 20px;
+        color: $color-highlight;
+        padding-top: 10px;
+        margin-left: 5px;
+        text-decoration: none;
+        
+    }
+
+    #title_logout{
+        @include article-text;
+        font-size: 10px;
+        display: flex;
+        cursor: pointer;
+
+        @include media(tablet){
+            @include article-text;
+            padding-top: 18px;
+            padding-right: 30px;
+            margin-left: 500px;
+
+            &:hover {
+                color: $color-highlight;
+                font-weight: bold;
+                font-size: 20px;
+             }
+        }
+
     }
 
     .nameContainer {
@@ -48,18 +100,24 @@
         }
 
         h1 {
-            font-size: 60px;
+            font-size: 25px;
             padding-top: 10px;
 
-            @media screen and (max-width: $s) {
-                font-size: 30px;
+            @include media(desktop-s){
+                font-size: 40px;
             }
         }
 
         .logo {
-            height: 100px;
+            height: 30px;
             padding-right: 10px;
             width: auto;
+
+            @include media(desktop-s){
+                height: 100px;
+                width: auto;
+            }
         }
+
     }
 }

@@ -1,46 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'globals';
+@import 'breakpoints';
 
 .container {
     align-items: center;
-    background-color: #EDE8FF;
+    background-color: $color-primary;
     border: solid 2px black;
     border-radius: 10px;
+    box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 370px;
+    height: 320px;
     justify-content: space-around;
     padding: 30px;
     position: absolute;
     right: 20px;
     top: 100px;
-    width: 300px;
+    width: 250px;
     z-index: 10;
 
     .title {
-        font-family:'Reem Kufi';
-        font-size: 24px;
-        word-spacing: 5px;
+        @include options-title;
+        font-size: 15px;
+        word-spacing: 3px;
     }
 
     input {
-        background-color: #EDE8FF;
+        background-color:$color-light;
     }
 
     .submit {
-        background-color: #C13B77;
-        border: none;
-        border-radius: 10px;
-        color: white;
-        font-size: 20px;
-        height: 40px;
-        width: 200px;
-
-        &:hover {
-            background-color: white;
-            color: #C13B77;
-            transition: all 0.5s ease-in;
-        }
+        @include button;
+        font-size: 10px;
+        height: 20px;
+        width: 100px;
     }
+
+    @include media(desktop-s){
+        height: 370px;
+        width: 300px;
+
+        .title {
+            @include options-title;
+            
+            word-spacing: 5px;
+        }
+
+        .submit {
+            @include button;
+            height: 40px;
+            width: 200px;
+        }
+
+    }
+
+        
 }

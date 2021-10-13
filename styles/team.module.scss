@@ -1,32 +1,40 @@
 @import 'globals';
+@import 'breakpoints';
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 700px;
-}
+    .container {@extend .container};
 
-.container h1 {
-    @include primary-title;
+    h1 {
+        @include primary-title;
+        font-size: 20px;
+        margin-top: 40px;
+    }
 
-    padding-bottom: 40px;
-    text-align: center;
+    @include media(desktop-m){
+
+        height: 700px;
+
+        h1 {
+            @include primary-title;
+            padding-bottom: 40px;
+        }
+    }
 }
 
 .container_images {
     display: flex;
-    gap: 50px;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
+    margin: 0px 20px 0px 20px;
+    
     .container_image{
         border-radius: 100px;
         overflow: hidden;
-        height: 300px;
-        width: 202px;
+        height: 160px;
+        width: 100px;
+        margin: 10px 20px 10px 20px;
         position: relative;
-
+    
         &:hover {
             .container2 {
                 opacity: 80%;
@@ -34,14 +42,20 @@
                 transition: all 0.5s ease-out;
             }
         }
-
+    
         img {
             max-width: 100%;
             min-height: 100%;
             object-fit: fill;
         }
 
+        @include media(desktop-m){
+            
+            height: 300px;
+            width: 202px;
+        }
     }
+    
 }
 
 
@@ -57,20 +71,34 @@
     justify-content: space-evenly;
     padding: 10px;
     transform: translateY(-105%);
+    
     p{
         text-align: center;
         color: $color-light;
+        font-size: 8px;
+
+        @include media(desktop-s){
+            font-size: 20px;
+        }
     }
 
     .icon {
         display:flex;
         flex-direction: column;
-        padding: 15px;
+        padding: 10px;
 
         a {
             align-self: flex-end;
-            font-size: 30px;
+            font-size: 15px;
             color: $color-light;
+        }
+
+        @include media(desktop-m){
+            padding: 15px;
+
+            a { 
+                font-size: 30px;
+            }
         }
     }
 }

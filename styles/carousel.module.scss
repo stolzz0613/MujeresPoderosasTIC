@@ -1,0 +1,31 @@
+@import 'globals';
+@import 'breakpoints';
+
+.container {
+
+    .container {@extend .container};
+
+    h1 {
+        @include primary-title;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .container_news{
+        padding: 0px 10px 0px 10px;
+
+        img {
+            width: 300px;
+        }
+
+        @include media(desktop-s) {
+
+            img{
+                width: 600px;
+            }
+        }
+    }
+}
+
+
+

@@ -1,18 +1,17 @@
 @import 'globals';
+@import 'breakpoints';
 
 .container {
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 400px;
-
+    align-items: center;
+    
     h1 {
         @include primary-title;
 
-        color: #41338B;
-        font-size: 36px;
-        text-align: center;
-        font-family: 'Reem Kufi', sans-serif;
+        font-size: 20px;
+        margin-top: 40px;
     }
 
     .container_text {
@@ -29,17 +28,42 @@
         }
 
         h2 {
-            color: #C13B77;
+            color: $color-highlight;
             text-align: left;
-            font-size: 20px;
+            font-size: 10px;
             font-weight: bold;
         }
 
         p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            color: black;
-            margin-bottom: 10px;
+            @include article-text;
+            font-size: 10px;
+        }
+
+        @include media(desktop-s) {
+
+            h2 {
+                color: $color-highlight;
+                text-align: left;
+                font-size: 20px;
+                font-weight: bold;
+            }
+    
+            p {
+                @include article-text;
+                
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @include media(desktop-s) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 400px;
+
+        h1 {
+            @include primary-title;
         }
     }
 }

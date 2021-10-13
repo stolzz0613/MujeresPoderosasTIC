@@ -1,13 +1,14 @@
 import Team from '../components/Team';
 import WhoWeAre from '../components/WhoWeAre';
-import Highlights from '../components/Highlights';
+import HomeCarousel from '../components/Carousel';
+
 
 function Home() {
 
   return (
     <div>
       <WhoWeAre />
-      <Highlights />
+      <HomeCarousel />
       <Team/>
     </div>
   )

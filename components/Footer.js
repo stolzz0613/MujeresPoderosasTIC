@@ -34,10 +34,9 @@ function Footer() {
             <div class={footer.column4}>
                 <h4>Términos y Condiciones</h4>
                 <a href="https://docs.google.com/document/d/e/2PACX-1vRgr1Ox4ZTKiq2vxRRlmsO3KN5vsi776WI_vIkYaanGr592lLg7sd_J88owvIP9nA/pub">
-                    <p>Descarga archivo para conocer términos y condiciones de la web</p>  
+                    <p>Conoce términos y condiciones de la web</p>
                 </a>
-            </div>
-            <div class={footer.column5}>
+
                 <h4>Ponte en Contacto</h4>
                 <div class={footer.social}>
                     <a href="https://t.me/joinchat/ga0oWIwc6kQ2OTFh">
@@ -56,6 +55,7 @@ function Footer() {
                         <i class="bi bi-mailbox"></i>
                     </a>
                 </div>
+            
             </div>
         </div>
     )

@@ -1,9 +1,18 @@
 @import 'globals';
+@import 'breakpoints';
 
 .container {
     @include quote-text;
 
-    margin: 50px auto;
+    font-size: 10px;
+    margin: 40px auto;
     text-align: right;
-    width: 500px;
+    width: 200px;
+
+    @include media(desktop-s){
+        @include quote-text;
+
+        font-size: 20px;
+        width: 600px;
+    }
 }
