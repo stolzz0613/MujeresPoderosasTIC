@@ -6,26 +6,52 @@
 .container {
     margin: 100px 0 200px 0;
     &_cards {
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
         gap: 30px 30px;
+        justify-content: center;
+    }
+
+    img{
+        height: 50%;
+        object-fit: fill;
+        display: block;
     }
 
     h1 {
         @include primary-title;
-
         margin-top: 100px;
+        text-align: center;
+    }
+
+    a {
+        color: $color-secondary;
+        font-family: $font-titles;
+        height: 100%;
+    }
+
+    p{
+        font-family: $font-titles;
     }
 }
 
 .tag {
     color: $color-primary;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 0px;
     background-color: $color-highlight;
     width: fit-content;
-    padding: 3px 10px 3px 10px;
-    position: absolute;
-    top: 10px;
+    padding: 2px 10px 3px 10px;
+}
+
+.card{
+    width: 300px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.card_body{
+    margin: 5px;
 }
