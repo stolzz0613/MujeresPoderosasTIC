@@ -9,11 +9,9 @@ function Card({data}) {
             <div className={news.card_body}>
                 <a target='_blank' href={data.link || data.linkNoticia} class="card-text">{data.title || data.titulo}</a>
                 <p class="card-text">{data.date}</p>
-                
             </div>
         </div>
     )
 }
 
 export default Card
-
