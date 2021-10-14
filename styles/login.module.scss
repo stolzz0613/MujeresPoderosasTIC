@@ -34,8 +34,8 @@
     .submit {
         @include button;
         font-size: 10px;
-        height: 20px;
-        width: 100px;
+        height: 30px;
+        width: 150px;
     }
 
     @include media(desktop-s){
@@ -53,8 +53,5 @@
             height: 40px;
             width: 200px;
         }
-
-    }
-
-        
+    }     
 }
