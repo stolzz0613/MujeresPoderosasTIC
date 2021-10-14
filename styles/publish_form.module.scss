@@ -89,7 +89,7 @@
                 background-color: $color-primary;
                 border: solid 1px $color-highlight;
                 color: $color-dark;
-                margin: 20px; 
+                margin: 20px;
             }
             &_edit{
                 @include button;
