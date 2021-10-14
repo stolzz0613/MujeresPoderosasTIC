@@ -8,6 +8,10 @@
     height: 100px;
     justify-content: space-between;
     padding: 70px 50px 70px 50px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
 
     #icon_login {
         display: flex;

@@ -6,7 +6,7 @@ function Team() {
     const store = useAppContext()
     const people = store.users.data
 
-    return (
+    return ( 
         <div className={team.container}>
             <h1>Equipo de Trabajo</h1>
             <div className={team.container_images}>
