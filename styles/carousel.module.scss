@@ -6,11 +6,15 @@
     .container {@extend .container};
     margin-bottom: 80px;
 
-    h1 {
+    h1 { 
         @include primary-title;
 
         font-size: 20px;
         margin-top: 40px;
+
+        @include media(desktop-m) {
+            @include primary-title;
+        }
     }
 
     .container_news{
