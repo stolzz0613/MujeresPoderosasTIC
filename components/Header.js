@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {useAppContext} from '../context/globalState'
+import { Button, ButtonGroup, Dropdown } from 'react-bootstrap';
 import header from '../styles/header.module.scss'
 import Link from 'next/link'
 import Login from './Login'
@@ -35,16 +36,35 @@ function Header() {
             </Link>
             { !store.userLogged.logged
                 ? <>
-                    <i id={header.icon_login}class="bi bi-person-circle" onClick={openLogin}></i>
-                    <a id={header.title_login} onClick={openLogin} >Ingreso Admin</a>
+                    <i id={header.icon_login}className="bi bi-person-circle" onClick={openLogin}></i>
                     <Login isVisible={isVisible}/>
                   </>
-                : <>
-                    <Link href='/profile'>
-                        <a id={header.title_login}>{store.userLogged.name}</a>
-                    </Link>
-                    <a id={header.icon_logout}class="bi bi-box-arrow-right" onClick={handleLogout}></a>
-                  </>
+                : <Dropdown as={ButtonGroup}>
+                    <style type="text/css">
+                        {`
+                            .btn-main {
+                                background-color: #C23878;
+                                color: white;
+                                font-size: 10px;
+                                padding:3px 10px 3px 10px;
+                            }
+                        `}
+                    </style>
+                    <Button variant='main'>{store.userLogged.name}</Button>
+
+                    <Dropdown.Toggle variant='main' id="dropdown-split-basic" />
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item >
+                            <Link href='/profile'>
+                                <a id={header.title_login}>Ver perfil</a>
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item >
+                            <a onClick={handleLogout} id={header.title_login}>Cerrar sesión</a>
+                        </Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             }
         </div>
     )

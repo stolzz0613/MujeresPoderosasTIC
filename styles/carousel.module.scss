@@ -4,9 +4,11 @@
 .container {
 
     .container {@extend .container};
+    margin-bottom: 80px;
 
     h1 {
         @include primary-title;
+
         font-size: 20px;
         margin-top: 40px;
     }

@@ -4,7 +4,7 @@
 .container {
     background-attachment: fixed;
     height: 100px;
-    width: 100%; 
+    width: 100%;
     margin-bottom: 40px;
 
     @include media(tablet){
@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
         height: 400px;
-        width: 100%; 
+        width: 100%;
     }
     .topBar{
         background-color: get-opacity($color-primary, 0.90);
@@ -43,7 +43,7 @@
                 @include options-title;
                 text-decoration: none;
                 word-spacing: 3px;
-                
+
                 &:hover {
                     text-decoration: solid underline $color-highlight 3px;
                     color: inherit
