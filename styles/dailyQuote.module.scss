@@ -9,7 +9,7 @@
     text-align: right;
     width: 200px;
 
-    @include media(desktop-s){
+    @include media(desktop-m){
         @include quote-text;
 
         font-size: 20px;
