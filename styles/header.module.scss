@@ -19,10 +19,6 @@
         font-size: 25px;
         color: $color-highlight;
         padding-top: 10px;
-
-        @include media(desktop-s){
-            display: none;
-        }
     }
 
     #title_login {

@@ -37,7 +37,6 @@ function Header() {
             { !store.userLogged.logged
                 ? <>
                     <i id={header.icon_login}className="bi bi-person-circle" onClick={openLogin}></i>
-                    <a id={header.title_login} onClick={openLogin} >Ingreso Admin</a>
                     <Login isVisible={isVisible}/>
                   </>
                 : <Dropdown as={ButtonGroup}>

@@ -8,7 +8,7 @@ const Carousel = () => {
   const chevronWidth = 40;
 
   useEffect(() => {
-    setimageNumber(window.screen.width > 800 ? 3 : 1)
+    setimageNumber(window.screen.width > 800 ? 3 : 2)
   }, [])
 
   return (
