@@ -16,10 +16,10 @@ function Team() {
                             <img src={person.image}/>
                             <div className={team.container2}>
                                 <div className={team.icon}>
-                                    <a href={person.linkedin}>
+                                    <a target='_blank' href={person.linkedin}>
                                         <i className="bi bi-linkedin"></i>
                                     </a>
-                                    <a href={person.github}>
+                                    <a target='_blank'  href={person.github}>
                                         <i className="bi bi-github"></i>
                                     </a>
                                 </div>
