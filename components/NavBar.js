@@ -1,6 +1,7 @@
 import navBar from '../styles/navBar.module.scss'
 import whoWeAre from '../styles/whoWeAre.module.scss'
 import team from '../styles/team.module.scss'
+import carousel from '../styles/carousel.module.scss'
 import Link from 'next/link'
 
 import Router from 'next/router'
@@ -18,7 +19,7 @@ const NavBar = () => {
         <div className={navBar.container}>
             <div className={navBar.topBar}>
                 <a href='#' onClick={() => handleScroll(whoWeAre.container)}>¿Quiénes somos?</a>
-                <a href='#' onClick={() => handleScroll(highlights.container)}>Destacados</a>
+                <a href='#' onClick={() => handleScroll(carousel.container)}>Destacados</a>
                 <a href='#' onClick={() => handleScroll(team.container)}>Equipo de trabajo</a>
                 <Link href='/news'>
                     <a href='#'>Informate</a>
