@@ -16,16 +16,14 @@ const NavBar = () => {
         }
     }
     return (
-        <div className={navBar.container}>
-            <div className={navBar.topBar}>
+        <><div className={navBar.topBar}>
                 <a href='#' onClick={() => handleScroll(whoWeAre.container)}>¿Quiénes somos?</a>
                 <a href='#' onClick={() => handleScroll(carousel.container)}>Destacados</a>
                 <a href='#' onClick={() => handleScroll(team.container)}>Equipo de trabajo</a>
                 <Link href='/news'>
                     <a href='#'>Informate</a>
                 </Link>
-            </div>
-        </div>
+            </div></>
 
     )
 }

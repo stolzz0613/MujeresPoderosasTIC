@@ -1,53 +1,36 @@
 @import 'globals';
 @import 'breakpoints';
 
-.container {
-    background-attachment: fixed;
-    height: 100px;
+.topBar{
+    background-color: $color-secondary;
+    display: grid;
+    justify-content: center;
     width: 100%;
-    margin-bottom: 40px;
+    padding: 10px 0 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
-    @include media(tablet){
-        background-image: linear-gradient(
-        rgba(65, 51, 139, 0.77),
-        ),
-        url(https://i.imgur.com/YCLWosZ.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        height: 400px;
-        width: 100%;
+    a {
+        @include options-title;
+        text-decoration: none;
+        word-spacing: 3px;
+        text-align: center;
+        padding: 2px;
     }
-    .topBar{
-        background-color: get-opacity($color-primary, 0.90);
-        display: grid;
+    @include media(tablet){
+        display: inline-flex;
         width: 100%;
-        justify-content: center;
-        margin-top: 30px;
+        justify-content: space-around;
         padding: 10px 0 10px 0;
-
         a {
             @include options-title;
+            color: white;
             text-decoration: none;
             word-spacing: 3px;
-            text-align: center;
-            padding: 2px;
-        }
-        @include media(tablet){
-            display: inline-flex;
-            width: 100%;
-            justify-content: space-around;
-            margin-top: 30px;
-            padding: 10px 0 10px 0;
-
-            a {
-                @include options-title;
-                text-decoration: none;
-                word-spacing: 3px;
-
-                &:hover {
-                    text-decoration: solid underline $color-highlight 3px;
-                    color: inherit
-                }
+            &:hover {
+                text-decoration: solid underline $color-highlight 3px;
+                color: white;
             }
         }
     }
