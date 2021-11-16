@@ -2,14 +2,14 @@
 @import 'breakpoints';
 
 .container {
-    background-color: #41338b;
-    color: #F5F2FF;
+    background-color: $color-secondary;
+    color: $color-light;
     display: flex;
     font-size: 7px;
     justify-content: center;
     gap: 20px;
     padding: 30px 5% 30px 5%;
-    
+
     h4{
         font-size: 10px;
     }
@@ -31,10 +31,9 @@
         max-width: 50%;
 
         i {
-            color: #F5F2FF;
+            color: $color-light;
             font-family: $font-text;
             font-size: 20px;
-            
         }
 
         a{
@@ -46,21 +45,21 @@
             gap: 30px;
         }
     }
-    
-    @include media(desktop-s) {
+}
+@include media(desktop-s) {
+    .container {
         align-items: stretch;
-        background-color: #41338b;
-        color: #F5F2FF;
+        background-color:$color-secondary;
+        color: $color-light;
         display: flex;
         font-size: 12px;
         justify-content: space-between;
         gap: 30px;
         padding: 30px 5% 30px 5%;
-        
+
         h4{
             font-size: 14px;
         }
-    
         .column1 {
             display: flex;
             img {
@@ -71,16 +70,14 @@
             display: flex;
             text-align: center;
             display: grid;
-            
         }
         .column4{
-            
+
             i {
-                color: #F5F2FF;
+                color: $color-light;
                 font-family: $font-text;
                 font-size: 20px;
             }
-    
             .social {
                 display: flex;
                 gap: 20px;

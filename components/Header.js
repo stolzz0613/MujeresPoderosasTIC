@@ -43,10 +43,11 @@ function Header() {
                     <style type="text/css">
                         {`
                             .btn-main {
-                                background-color: #C23878;
+                                background-color: #C13B77;
                                 color: white;
                                 font-size: 10px;
                                 padding:3px 10px 3px 10px;
+                                border-radius: 0px;
                             }
                         `}
                     </style>

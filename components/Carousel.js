@@ -8,8 +8,8 @@ const Carousel = () => {
   const chevronWidth = 40;
 
   useEffect(() => {
-    setimageNumber(window.screen.width > 800 ? 3 : 2)
-  }, [])
+    setimageNumber(window.screen.width > 800 ? 2 : 1)
+  }, [window.screen.width])
 
   return (
     <div className={carousel.container}>
@@ -20,8 +20,8 @@ const Carousel = () => {
             activeItemIndex={activeItemIndex}
             numberOfCards={imageNumber}
             gutter={0}
-            leftChevron={<span style={{fontSize:'40px', color: 'white'}}>{'<'}</span>}
-            rightChevron={<span style={{fontSize:'40px', color: 'white'}}>{'>'}</span>}
+            leftChevron={<i style={{ fontSize:'50px', color:'#C13B77'}} class='bi bi-arrow-left-circle-fill'></i>}
+            rightChevron={<i style={{ fontSize:'50px', color:'#C13B77'}} class='bi bi-arrow-right-circle-fill'></i>}
             chevronWidth={chevronWidth}
             infiniteLoop= {true}
             outsideChevron={false}

@@ -1,5 +1,6 @@
 @import 'globals';
 @import 'breakpoints';
+
 .container{
 
     h1 {
@@ -59,8 +60,10 @@
             margin: 20px;
         }
     }
+}
 
-    @include media(tablet){
+@include media(tablet){
+    .container{
         .form {
             @include article-text;
 

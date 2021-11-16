@@ -9,13 +9,11 @@
 
     h1 {
         @include primary-title;
-
-        font-size: 20px;
         margin-top: 40px;
     }
 
     .container_text {
-        background-color: #F5F2FF;
+        background-color: $color-primary;
         display: flex;
         align-items: center;
         gap: 10%;
@@ -38,34 +36,29 @@
             @include article-text;
             font-size: 10px;
         }
-
-        @include media(desktop-s) {
-
+    }
+}
+@include media(tablet){
+    .container {
+        h1 {
+            @include primary-title;
+            font-size: 30px;
+        }
+        .container_text {
             h2 {
                 color: $color-highlight;
                 text-align: left;
                 font-size: 20px;
                 font-weight: bold;
             }
-    
             p {
                 @include article-text;
-                
+                font-size: 20px;
                 margin-bottom: 10px;
             }
         }
     }
-
-    @include media(desktop-m) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 400px;
-
-        h1 {
-            @include primary-title;
-        }
-    }
 }
+
 
 
