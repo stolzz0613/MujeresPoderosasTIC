@@ -8,28 +8,19 @@
 
     h1 { 
         @include primary-title;
-
-        font-size: 20px;
         margin-top: 40px;
 
         @include media(desktop-m) {
             @include primary-title;
         }
     }
-
     .container_news{
         padding: 0px 10px 0px 10px;
-
-        img {
-            width: 300px;
-        }
-
-        @include media(desktop-s) {
-
-            img{
-                width: 600px;
-            }
-        }
+    }
+}
+@include media(tablet) {
+    .container h1{
+        font-size: 30px;
     }
 }
 
