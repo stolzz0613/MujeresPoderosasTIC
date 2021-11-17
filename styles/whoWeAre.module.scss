@@ -1,0 +1,101 @@
+@import 'globals';
+@import 'breakpoints';
+
+.generalContainer{
+    position:relative;
+
+    .containerImg {
+        background: #ff319c url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-attachment: fixed;
+        background-size: cover;
+        height: 630px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        svg{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        svg path {
+            fill: #E9E0FF;
+        }
+    }
+    .containerWho {
+        background-color: #E9E0FF;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        h1 {
+            color: $color-secondary;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            font-size: 30px;
+            margin-left: 150px;
+        }
+
+        .container_text {
+            align-items: center;
+            display: flex;
+            gap: 10%;
+            padding: 40px 60px 40px 60px;
+            width: 100%;
+
+            .text {
+                .text_title {
+                    width: 100%;
+                }
+            }
+
+            h2 {
+                color: $color-highlight;
+                text-align: end;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                font-weight: bold;
+                padding-right: 50px;
+                margin-bottom: 80px;
+            }
+            p {
+                @include article-text;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            @include media(desktop-s) {
+                h2 {
+                    color: $color-highlight;
+                    text-align: right;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding-bottom: 100px;
+                    padding-righ: 0;
+                }
+                p {
+                    @include article-text;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        @include media(desktop-m) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+            h1 {
+                color: $color-secondary;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+                font-size: 40px;
+                margin-left: 300px;
+            }
+        }
+    }
+}

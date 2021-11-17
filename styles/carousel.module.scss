@@ -1,0 +1,28 @@
+@import 'globals';
+@import 'breakpoints';
+
+.container {
+
+    .container {@extend .container};
+    margin-bottom: 80px;
+
+    h1 { 
+        @include primary-title;
+        margin-top: 40px;
+
+        @include media(desktop-m) {
+            @include primary-title;
+        }
+    }
+    .container_news{
+        padding: 0px 10px 0px 10px;
+    }
+}
+@include media(tablet) {
+    .container h1{
+        font-size: 30px;
+    }
+}
+
+
+

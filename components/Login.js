@@ -1,59 +1,84 @@
-import Link from 'next/link'
-import { useState } from 'react';
-import { useAppContext } from '../context/globalState';
-import login from '../actions/login';
+import login from '../styles/login.module.scss'
+import {useAppContext} from '../context/globalState'
+import { useState } from 'react'
 
-function Login() {
+import Router from 'next/router'
+import axios from 'axios'
+import Swal from 'sweetalert2'
 
-    const { userLogged } = useAppContext();
-    const [ email, setEmail ] = useState('');
-    const [ password, setPassword]  = useState('');
-    const { setUserLogged, setLoading } = useAppContext();
+function Login({ isVisible }) {
+    const store = useAppContext()
+    const [user, setuser] = useState('')
+    const [password, setpassword] = useState('')
 
-    function handleLogin() {
-        login( email, password )
+    const handleLogin = () => {
+        axios.post( 'https://nameless-brushlands-25377.herokuapp.com/api/auth', {
+            email: user,
+            password: password
+        } )
             .then( res => {
-                setLoading(false)
-                if (res.data.user.logged) {
-                    localStorage.setItem('logged', true)
-                    setUserLogged({
-                        name: res.data.user.name,
-                        email: res.data.user.email
+
+                let data = res.data.user
+                if ( data.logged ) {
+                    store.setUserLogged({
+                        email: data.email,
+                        cc: data.cc,
+                        name: data.name,
+                        image: data.image,
+                        logged: true
                     })
-                    setEmail('')
-                    setPassword('')
-                    alert('Bienvenido')
+
+                    localStorage.setItem('userLogged_MP', JSON.stringify({
+                        email: data.email,
+                        cc: data.cc,
+                        name: data.name,
+                        image: data.image,
+                        logged: true
+                    }))
+
+                    Swal.fire(
+                        'Bienvenido!',
+                        'Iniciaste sesión',
+                        'success'
+                    )
+
+                    Router.push('/profile')
                 } else {
-                    alert ('Contraseña incorrecta')
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Usuario o Contraseña incorrecto',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    })
                 }
             })
-            .catch( err => {
-                alert ('Contraseña incorrecta')
+            .catch( res => {
+                (res)
             })
     }
 
-    if ( !userLogged ) {
-        return (
-            <>
-                <input
-                    onChange = { e => setEmail(e.target.value) }
-                />
-                <input
-                    onChange = { e => setPassword(e.target.value) }
-                />
-                <button onClick={ () => handleLogin() }>LOGIN...</button>
-            </>
-        )
-    } else {
-        return (
-            <>
-                <h1>BIENVENIDO { userLogged.name }</h1>
-                <Link href='./'>
-                    <a>IR AL HOME</a>
-                </Link>
-            </>
-        )
-    }
+    return (
+        isVisible && <div className={login.container}>
+            <p class={login.title}>Inicio de sesión</p>
+            <div class='input-group'>
+                <span class='input-group-append'>
+                    <span class='input-group-text'>
+                        <i class='bi bi-person-fill'></i>
+                    </span>
+                </span>
+                <input onChange={e => {setuser(e.target.value)}} class='form-control border-right-0' placeholder='Usuario' />
+            </div>
+            <div class='input-group'>
+                <span class='input-group-append'>
+                    <span class='input-group-text'>
+                        <i class='bi bi-lock-fill'></i>
+                    </span>
+                </span>
+                <input onChange={e => {setpassword(e.target.value)}} class='form-control border-right-0' type='password' placeholder='Contraseña'/>
+            </div>
+            <button class={login.submit} onClick={handleLogin}>{store.loading ? 'Cargando...' : 'Ingresar'}</button>
+        </div>
+    )
 }
 
 export default Login

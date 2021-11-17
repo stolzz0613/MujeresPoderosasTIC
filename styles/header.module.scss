@@ -1,60 +1,72 @@
 @import 'globals';
+@import 'breakpoints';
 
 .container {
     align-items: center;
-    background-color: $main;
+    background-color: $color-light;
     display: flex;
-    height: 100px;
+    height: 20px;
     justify-content: space-between;
-    padding: 70px 50px 70px 50px;
+    padding: 30px 30px 0px 30px;
+    margin:0;
+    gap: 20px;
+    box-sizing: border-box;
 
-    @media screen and (max-width: $s) {
-        padding: 10px 10px 10px 10px;
+    #icon_login {
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        font-size: 25px;
+        color: rgb(161, 159, 159);
+        padding-top: 10px;
     }
-
+    #title_login {
+        @include article-text;
+        color:$color-dark;
+        display: flex;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            color: $color-highlight;
+        }
+    }
     .nameContainer {
         align-items: center;
-        color: $highlight;
+        color: $color-highlight;
         cursor: pointer;
         display:flex;
-        font-family: 'Rochester', cursive;
-
-        &:hover {
-            transform: scale(1.2);
-            transition: transform 0.5s ease;
-        }
+        font-family: $font-name;
 
         h1 {
-            font-size: 60px;
+            font-size: 20px;
             padding-top: 10px;
-
-            @media screen and (max-width: $s) {
-               font-size: 30px;
-            }
         }
 
         .logo {
-            height: 60px;
+            height: 50px;
             padding-right: 10px;
             width: auto;
         }
     }
+}
+@include media(tablet){
+    .container{
+        height: 100px;
+        padding: 50px 30px 50px 30px;
 
-    a {
-        color: gray;
-        font-size: 20px;
-        padding-top: 10px;
-        text-decoration: none;
+        .nameContainer{
 
-        &:hover {
-            color: $highlight;
-            font-weight: bold;
-            font-size: 30px;
-            transition: font-size 0.5s ease;
-        }
-
-        @media screen and (max-width: $s) {
-            display: none;
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.5s ease;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .logo {
+                height: 90px;
+                width: auto;
+            }
         }
     }
 }

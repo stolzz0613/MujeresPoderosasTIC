@@ -1,9 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-$highlight: #C13B77;
-$main: #EDE8FF;
+//Variables
+$color-primary: #E9E0FF;
+$color-light: #FFFFFF;
+$color-highlight: #C13B77;
+$color-secondary: #54338B;
+$color-dark: #000000;
+$font-name:'Rochester', cursive;
+$font-titles:'Roboto', sans-serif;
+$font-text:'Open Sans', sans-serif;
+$font-quote: 'Reem Kufi', sans-serif;
 
-$s: '430px';
-$m: '900px';
-$l: '1200px';
+//mixins
+@mixin primary-title{
+    color: $color-secondary;
+    font-family: $font-titles;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    text-align: center;
+}
+@mixin options-title {
+    color:$color-dark;
+    font-family: $font-titles;
+    font-size: 18px;
+}
+
+@mixin article-text{
+    color: $color-dark;
+    font-family: $font-text;
+    font-size: 14px;
+}
+
+@mixin quote-text{
+    color: $color-dark;
+    font-family: $font-quote;
+    font-size: 10px;
+    text-align: right;
+}
+@mixin button {
+    background-image: linear-gradient(to right,$color-highlight,$color-secondary);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3) ;
+    border: none;
+    border-radius: 10px;
+    color: $color-light;
+    font-size: 15px;
+    font-family: $font-text;
+
+    &:hover {
+        background-image: linear-gradient(to right,$color-primary,$color-light);
+        color: $color-dark;
+        transition: all 0.3s ease-in;
+        border:solid 1px $color-dark;
+    }
+}
+
+//Funciones
+@function get-opacity($color,$nivel){
+    @return rgba($color,$nivel);
+}
