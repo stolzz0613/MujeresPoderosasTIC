@@ -5,27 +5,31 @@ import carousel from '../styles/carousel.module.scss'
 import Link from 'next/link'
 
 import Router from 'next/router'
+import { useState } from 'react'
 
 const NavBar = () => {
 
     const handleScroll = (name) => {
-        if (document.querySelector('.' + name)) {
-            window.scrollTo(0, document.querySelector('.' + name).offsetTop)
+        const element = document.querySelector('.' + name)
+        if (element) {
+            const height = element.offsetTop - 100
+            window.scrollTo(0, height)
         } else {
             Router.push('/')
         }
     }
+
     return (
-        <div className={navBar.container}>
+        <>
             <div className={navBar.topBar}>
-                <a href='#' onClick={() => handleScroll(whoWeAre.container)}>¿Quiénes somos?</a>
-                <a href='#' onClick={() => handleScroll(carousel.container)}>Destacados</a>
-                <a href='#' onClick={() => handleScroll(team.container)}>Equipo de trabajo</a>
+                <a href='#' onClick={(e) => {e.preventDefault(); handleScroll(whoWeAre.container)}}>¿Quiénes somos?</a>
+                <a href='#' onClick={(e) => {e.preventDefault(); handleScroll(carousel.container)}}>Destacados</a>
+                <a href='#' onClick={(e) => {e.preventDefault(); handleScroll(team.container)}}>Equipo de trabajo</a>
                 <Link href='/news'>
                     <a href='#'>Informate</a>
                 </Link>
             </div>
-        </div>
+        </>
 
     )
 }

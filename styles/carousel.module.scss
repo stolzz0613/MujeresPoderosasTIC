@@ -5,10 +5,17 @@
 
     .container {@extend .container};
     margin-bottom: 80px;
-
+    width: 100%;
     h1 {
         @include primary-title;
         margin-top: 40px;
+<<<<<<< HEAD
+=======
+
+        @include media(desktop-m) {
+            @include primary-title;
+        }
+>>>>>>> 909412be65a908262d11e2f654cc6693350376a9
     }
     .container_news{
         padding: 0px 10px 0px 10px;
