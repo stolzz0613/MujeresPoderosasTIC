@@ -17,15 +17,9 @@
     .column1 {
         display: none;
 
-        img {
-            width: 100px;
-        }
-    }
-    .column2, .column3{
-        display: none;
     }
 
-    .column4{
+    .column2{
         text-align: center;
         display: grid;
         max-width: 50%;
