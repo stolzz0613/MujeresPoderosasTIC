@@ -1,0 +1,20 @@
+@import 'globals';
+@import 'breakpoints';
+
+.container {
+    background-color: $color-secondary;
+    border-radius: 10px;
+    bottom: 0px;
+    min-height: 70px;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: white;
+    }
+}
