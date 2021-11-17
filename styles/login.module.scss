@@ -6,9 +6,9 @@
 .container {
     align-items: center;
     background-color: $color-primary;
-    border: solid 2px black;
-    border-radius: 10px;
-    box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.3);
+    border: solid 1px $color-secondary;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -23,35 +23,21 @@
 
     .title {
         @include options-title;
-        font-size: 15px;
         word-spacing: 3px;
-    }
-
-    input {
-        background-color:$color-light;
     }
 
     .submit {
         @include button;
-        font-size: 10px;
         height: 30px;
         width: 150px;
     }
 
     @include media(desktop-s){
-        height: 370px;
-        width: 300px;
-
-        .title {
-            @include options-title;
-            
-            word-spacing: 5px;
-        }
 
         .submit {
             @include button;
             height: 40px;
             width: 200px;
         }
-    }     
+    }
 }

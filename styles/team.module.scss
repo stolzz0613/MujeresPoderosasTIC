@@ -6,101 +6,95 @@
 
     h1 {
         @include primary-title;
-        font-size: 20px;
         margin-top: 40px;
     }
+    .container_images {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0px 20px 0px 20px;
 
-    @include media(desktop-m){
+        .container_image{
+            border-radius: 100px;
+            overflow: hidden;
+            height: 160px;
+            width: 100px;
+            margin: 10px 20px 10px 20px;
+            position: relative;
+            &:hover {
+                .container2 {
+                    opacity: 80%;
+                    transform: translateY(0%);
+                    transition: all 0.5s ease-out;
+                }
+            }
 
-        height: 700px;
+            img {
+                max-width: 100%;
+                min-height: 100%;
+                object-fit: fill;
+            }
+        }
 
+    }
+    .container2 {
+        background-color: $color-dark;
+        position: absolute;
+        top: 0%;
+        opacity: 0%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10px;
+        transform: translateY(-105%);
+
+        p{
+            text-align: center;
+            color: $color-light;
+            font-size: 8px;
+        }
+
+        .icon {
+            display:flex;
+            flex-direction: column;
+            padding: 10px;
+
+            a {
+                align-self: flex-end;
+                font-size: 15px;
+                color: $color-light;
+            }
+        }
+    }
+}
+
+@include media(tablet){
+    .container{
+        margin-bottom: 200px;
         h1 {
             @include primary-title;
+            font-size: 30px;
             padding-bottom: 40px;
         }
-    }
-}
-
-.container_images {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 0px 20px 0px 20px;
-    
-    .container_image{
-        border-radius: 100px;
-        overflow: hidden;
-        height: 160px;
-        width: 100px;
-        margin: 10px 20px 10px 20px;
-        position: relative;
-    
-        &:hover {
-            .container2 {
-                opacity: 80%;
-                transform: translateY(0%);
-                transition: all 0.5s ease-out;
+        .container_images {
+            margin-bottom: 200px;
+            .container_image{
+                height: 300px;
+                width: 202px;
             }
         }
-    
-        img {
-            max-width: 100%;
-            min-height: 100%;
-            object-fit: fill;
-        }
-
-        @include media(desktop-m){
-            
-            height: 300px;
-            width: 202px;
-        }
-    }
-    
-}
-
-
-.container2 {
-    background-color: $color-dark;
-    position: absolute;
-    top: 0%;
-    opacity: 0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10px;
-    transform: translateY(-105%);
-    
-    p{
-        text-align: center;
-        color: $color-light;
-        font-size: 8px;
-
-        @include media(desktop-s){
-            font-size: 20px;
-        }
-    }
-
-    .icon {
-        display:flex;
-        flex-direction: column;
-        padding: 10px;
-
-        a {
-            align-self: flex-end;
-            font-size: 15px;
-            color: $color-light;
-        }
-
-        @include media(desktop-m){
-            padding: 15px;
-
-            a { 
-                font-size: 30px;
+        .container2 {
+            p{
+                font-size: 20px;
+            }
+            .icon {
+                padding: 15px;
+                a {
+                    font-size: 30px;
+                }
             }
         }
     }
 }
-
-

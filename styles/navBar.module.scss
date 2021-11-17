@@ -7,18 +7,8 @@
     width: 100%;
     margin-bottom: 40px;
 
-    @include media(tablet){
-        background-image: linear-gradient(
-        rgba(65, 51, 139, 0.77),
-        ),
-        url(https://i.imgur.com/YCLWosZ.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        height: 400px;
-        width: 100%;
-    }
     .topBar{
-        background-color: get-opacity($color-primary, 0.90);
+        background-color: get-opacity($color-secondary, 0.90);
         display: grid;
         width: 100%;
         justify-content: center;
@@ -27,20 +17,37 @@
 
         a {
             @include options-title;
+
+            color: $color-light;
+            font-size: 10px;
             text-decoration: none;
             word-spacing: 3px;
             text-align: center;
             padding: 2px;
         }
-        @include media(tablet){
+    }
+}
+@include media(tablet){
+    .container {
+        background-image: linear-gradient(
+        rgba(65, 51, 139, 0.77),
+        ),
+        url(https://i.imgur.com/YCLWosZ.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 400px;
+        width: 100%;
+
+        .topBar{
             display: inline-flex;
             width: 100%;
             justify-content: space-around;
             margin-top: 30px;
             padding: 10px 0 10px 0;
-
             a {
                 @include options-title;
+
+                color: $color-light;
                 text-decoration: none;
                 word-spacing: 3px;
 

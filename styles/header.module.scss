@@ -3,11 +3,11 @@
 
 .container {
     align-items: center;
-    background-color: $color-primary;
+    background-color: $color-light;
     display: flex;
-    height: 100px;
+    height: 20px;
     justify-content: space-between;
-    padding: 50px 30px 50px 30px;
+    padding: 30px 30px 0px 30px;
     margin:0;
     gap: 20px;
     box-sizing: border-box;
@@ -17,89 +17,57 @@
         align-items: flex-end;
         cursor: pointer;
         font-size: 25px;
-        color: $color-highlight;
+        color: rgb(161, 159, 159);
         padding-top: 10px;
     }
-
     #title_login {
-        @include media(desktop-s){
-            @include article-text;
-            color: gray;
-            display: flex;
-            cursor: pointer;
-            text-decoration: none;
-
-            &:hover {
-                color: $color-highlight;
-                font-weight: bold;
-                font-size: 20px;
-                transition: all 0.5s ease-in
-            }
-        }
-    }
-
-    #icon_logout{
-        display: flex;
-        align-items: flex-end;
-        cursor: pointer;
-        font-size: 20px;
-        color: $color-highlight;
-        padding-top: 10px;
-        margin-left: 5px;
-        text-decoration: none;
-    }
-
-    #title_logout{
         @include article-text;
-        font-size: 10px;
+        color:$color-dark;
         display: flex;
         cursor: pointer;
-
-        @include media(tablet){
-            @include article-text;
-            padding-top: 18px;
-            padding-right: 30px;
-            margin-left: 500px;
-
-            &:hover {
-                color: $color-highlight;
-                font-weight: bold;
-                font-size: 20px;
-            }
+        text-decoration: none;
+        &:hover {
+            color: $color-highlight;
         }
-
     }
-
     .nameContainer {
         align-items: center;
         color: $color-highlight;
         cursor: pointer;
         display:flex;
-        font-family: 'Rochester', cursive;
-
-        &:hover {
-            transform: scale(1.2);
-            transition: transform 0.5s ease;
-        }
+        font-family: $font-name;
 
         h1 {
             font-size: 20px;
             padding-top: 10px;
-
-            @include media(desktop-s){
-                font-size: 40px;
-            }
         }
 
         .logo {
-            height: 30px;
+            height: 50px;
             padding-right: 10px;
             width: auto;
+        }
+    }
+}
+@include media(tablet){
+    .container{
+        height: 100px;
+        padding: 50px 30px 50px 30px;
 
-            @include media(desktop-s){
-                height: 100px;
+        .nameContainer{
+
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.5s ease;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .logo {
+                height: 90px;
                 width: auto;
             }
         }
     }
 }
+
