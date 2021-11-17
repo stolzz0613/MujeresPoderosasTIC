@@ -8,8 +8,8 @@ const Carousel = () => {
   const chevronWidth = 40;
 
   useEffect(() => {
-    setimageNumber(window.screen.width > 800 ? 2 : 1)
-  }, [window.screen.width])
+    typeof window !== 'undefined' && setimageNumber(window.screen.width > 800 ? 2 : 1)
+  }, [])
 
   return (
     <div className={carousel.container}>
