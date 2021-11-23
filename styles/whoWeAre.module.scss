@@ -5,7 +5,7 @@
     position:relative;
 
     .containerImg {
-        background: #ff319c url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
         background-attachment: fixed;
         background-size: cover;
         height: 630px;
@@ -32,7 +32,7 @@
             color: $color-secondary;
             font-family: 'Roboto', sans-serif;
             text-decoration: none;
-            font-size: 30px;
+            font-size: 40px;
             margin-left: 150px;
         }
 

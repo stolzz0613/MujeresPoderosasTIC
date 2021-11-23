@@ -4,6 +4,10 @@
 .container {
     padding: 0 80px 0 80px;
 
+    .containerImg{
+        display: none;
+    }
+
     .photo {
         display: flex;
         height: 200px;
@@ -26,6 +30,7 @@
     }
 
     .info {
+        
         margin-bottom: 100px;
         .data {
             display: flex;
@@ -63,20 +68,53 @@
             width: 60%;
         }
     }
+}
 
-    @include media(tablet){
+@include media(tablet){
+    .container{
+        padding: 0;
+        .containerImg {
+            background-image: 
+                linear-gradient(
+                    rgba(65, 51, 139, 0.4),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url('https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/nicole-wolf--xTBn1YBrTE-unsplash.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            display: block;
+            height: 630px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            svg{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            svg path {
+                fill: white;
+            }
+        }
 
         .photo {
             display: flex;
             height: 300px;
-            margin: -150px auto 70px;
+            margin: -80px auto 70px;
+            position: relative;
             width: 300px;
+            z-index: 9;
         }
 
         .title {
             h1 {
                 @include primary-title;
             }
+        }
+
+        .info{
+            padding: 0 300px 0 300px;
         }
 
         .info .data {
@@ -90,7 +128,9 @@
         .buttons {
             .submit {
                 @include button;
+                width: 500px;
             }
         }
     }
+    
 }

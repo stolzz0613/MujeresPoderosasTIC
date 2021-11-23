@@ -2,7 +2,12 @@
 @import 'breakpoints';
 
 .containerImg {
-    background: #ff319c url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image: 
+        linear-gradient(
+            rgba(65, 51, 139, 0.4),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('https://i.imgur.com/y0aa81k.jpeg');
     background-attachment: fixed;
     background-size: cover;
     height: 630px;
