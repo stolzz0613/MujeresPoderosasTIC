@@ -6,7 +6,7 @@
 
     h1 {
         @include primary-title;
-        margin-top: 40px;
+        margin-bottom: 50px;
     }
     .container_images {
         display: flex;
@@ -72,11 +72,10 @@
 
 @include media(tablet){
     .container{
-        margin-bottom: 200px;
+        padding-top: 80px;
         h1 {
-            @include primary-title;
-            font-size: 30px;
-            padding-bottom: 40px;
+            font-size: 40px;
+            padding-bottom: 60px;
         }
         .container_images {
             margin-bottom: 200px;

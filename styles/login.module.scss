@@ -5,7 +5,7 @@
 
 .container {
     align-items: center;
-    background-color: $color-primary;
+    background-color: $color-light;
     border: solid 1px $color-secondary;
     border-radius: 20px;
     box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
@@ -23,16 +23,23 @@
 
     .title {
         @include options-title;
+        color:$color-dark;
         word-spacing: 3px;
     }
-
+ 
     .submit {
         @include button;
         height: 30px;
         width: 150px;
     }
 
-    @include media(desktop-s){
+    @include media(tablet){
+
+        .title {
+            @include options-title;
+            color:$color-dark;
+            font-size: 20px;
+        }
 
         .submit {
             @include button;

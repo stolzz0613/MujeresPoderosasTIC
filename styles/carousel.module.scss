@@ -2,28 +2,24 @@
 @import 'breakpoints';
 
 .container {
-
-    .container {@extend .container};
     margin-bottom: 80px;
-    width: 100%;
+
     h1 {
         @include primary-title;
-        margin-top: 40px;
-<<<<<<< HEAD
-=======
-
-        @include media(desktop-m) {
-            @include primary-title;
-        }
->>>>>>> 909412be65a908262d11e2f654cc6693350376a9
+        margin-bottom: 50px;
     }
     .container_news{
         padding: 0px 10px 0px 10px;
     }
 }
 @include media(tablet) {
-    .container h1{
-        font-size: 30px;
+    .container {
+
+        h1 {
+            @include primary-title;
+            font-size: 40px;
+            padding-bottom: 120px;
+        }
     }
 }
 
