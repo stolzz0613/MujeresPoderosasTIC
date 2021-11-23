@@ -93,6 +93,9 @@ function index()  {
                         <Link href={{ pathname: '/profile/publish', query: {type: 'edit'}}}>
                             <button className={profile.submit}>Editar o eliminar publicación</button>
                         </Link>
+                        <Link href={{ pathname: '/profile/publish', query: {type: 'create'}}}>
+                            <button className={profile.submit}>Crear mujer inspiradora</button>
+                        </Link>
                     </div>
                   </>
             }

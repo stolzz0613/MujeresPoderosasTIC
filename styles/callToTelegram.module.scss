@@ -12,11 +12,7 @@
 
     h1 {
         @include primary-title;
-
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 40px;
-        width: 70%;
+        padding-bottom: 20px;
     }
     .content {
         align-items: center;
@@ -28,14 +24,23 @@
 
     a {
         @include button;
-
         align-items: center;
         display: flex;
-        font-weight: bold;
-        height: 50px;
+        height: 40px;
         justify-content: center;
         text-decoration: none;
         width: 200px;
         z-index: 99;
+    }
+}
+@include media(tablet){
+    .container {
+        h1 {
+            @include primary-title;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            width: 70%;
+        }
     }
 }

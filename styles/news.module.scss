@@ -2,9 +2,9 @@
 @import 'breakpoints';
 
 
-
 .container {
-    margin: 100px 0 200px 0;
+    padding: 40px 0 30px 0;
+
     &_cards {
         align-items: center;
         display: flex;
@@ -21,7 +21,7 @@
 
     h1 {
         @include primary-title;
-        margin-top: 100px;
+        margin-bottom: 50px;
     }
 
     a {
@@ -34,7 +34,6 @@
         font-family: $font-titles;
     }
 }
-
 .tag {
     color: $color-primary;
     border-radius: 0px 0px 10px 0px;
@@ -42,15 +41,24 @@
     width: fit-content;
     padding: 2px 10px 3px 10px;
 }
-
 .card{
     width: 300px;
     box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
     height: 300px;
     overflow: hidden;
     object-fit: cover;
+    border-radius: 20px;
 }
-
 .card_body{
     margin: 5px;
+}
+
+@include media(tablet) {
+    .container {
+
+        h1 {
+            @include primary-title;
+            font-size: 40px;
+        }
+    }
 }

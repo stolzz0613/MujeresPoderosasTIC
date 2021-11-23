@@ -22,8 +22,10 @@
     z-index: 30;
 
     .title {
-        @include options-title;
         color:$color-dark;
+        font-family: $font-titles;
+        font-size: 16px;
+        text-decoration: none;
         word-spacing: 3px;
     }
  
