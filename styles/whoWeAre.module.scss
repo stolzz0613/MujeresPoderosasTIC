@@ -5,96 +5,93 @@
     position:relative;
 
     .containerImg {
-        background: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-        background-attachment: fixed;
-        background-size: cover;
-        height: 630px;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        width: 100%;
-        svg{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-        svg path {
-            fill: #E9E0FF;
-        }
+        display: none;
     }
     .containerWho {
-        background-color: #E9E0FF;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        background-color: $color-primary;
 
         h1 {
-            color: $color-secondary;
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            font-size: 40px;
-            margin-left: 150px;
+            @include primary-title;
+            padding-top: 40px;
         }
 
         .container_text {
-            align-items: center;
             display: flex;
-            gap: 10%;
-            padding: 40px 60px 40px 60px;
-            width: 100%;
-
-            .text {
-                .text_title {
-                    width: 100%;
-                }
-            }
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 40px 0px 40px;
 
             h2 {
+                @include article-text;
                 color: $color-highlight;
-                text-align: end;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15px;
-                font-weight: bold;
-                padding-right: 50px;
-                margin-bottom: 80px;
+                text-align: center;
+                font-weight:800;
+                padding: 20px 10px 0 10px;
+                word-spacing: 4px;
             }
             p {
                 @include article-text;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15px;
-                font-weight: 600;
+                text-align: justify;
+            }
+        }
+    }
+}
+@include media(desktop-s) {
+
+    .generalContainer{
+        position: relative;
+
+        .containerImg {
+            display: block;
+            background: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-attachment: fixed;
+            background-size: cover;
+            height: 630px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            svg{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            svg path {
+                fill: #E9E0FF;
             }
 
-            @include media(desktop-s) {
+            h1 {
+                @include primary-title;
+                font-size: 40px;
+                bottom: 20px;
+                margin-left: 300px;
+                position: absolute;
+            }
+        }
+        .containerWho {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            h1{
+                display: none;
+            }
+
+            .container_text {
+                display: grid;
+                grid-template-columns: auto auto 1fr;
+                gap: 5%;
+                padding: 40px 60px 0px 60px;
+
                 h2 {
-                    color: $color-highlight;
-                    text-align: right;
-                    font-family: 'Roboto', sans-serif;
+                    text-align: end;
                     font-size: 24px;
-                    font-weight: bold;
-                    padding-bottom: 100px;
-                    padding-righ: 0;
+                    margin-bottom: 80px;
                 }
                 p {
                     @include article-text;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 22px;
-                    font-weight: 600;
-                    margin-bottom: 20px;
+                    font-size: 24px;
                 }
-            }
-        }
-        @include media(desktop-m) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 200px;
-            h1 {
-                color: $color-secondary;
-                font-family: 'Roboto', sans-serif;
-                text-decoration: none;
-                font-size: 40px;
-                margin-left: 300px;
             }
         }
     }
