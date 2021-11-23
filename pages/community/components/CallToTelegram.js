@@ -24,7 +24,7 @@ export default function CallToTelegram() {
             </div>
             <div className={callToTelegram.content}>
                 <h1>!Haz parte de nuestra comunidad en Telegram!</h1>
-                <button>Quiero unirme</button>
+                <a href='https://t.me/joinchat/ga0oWIwc6kQ2OTFh'>Quiero unirme</a>
             </div>
             <div style={{ overflow: screenWidth < 450 ? 'hidden' : 'visible'}}>
                 <svg

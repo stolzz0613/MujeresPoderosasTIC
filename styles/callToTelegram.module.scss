@@ -26,11 +26,15 @@
         z-index: 999;
     }
 
-    button {
+    a {
         @include button;
 
+        align-items: center;
+        display: flex;
         font-weight: bold;
         height: 50px;
+        justify-content: center;
+        text-decoration: none;
         width: 200px;
         z-index: 99;
     }
