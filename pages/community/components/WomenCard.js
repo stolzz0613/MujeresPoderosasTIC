@@ -5,9 +5,9 @@ export default function WomenCard({data}) {
 
     return (
         <div className={womenCard.container}>
-            <img src={data.img}/>
-            <span className={womenCard.name}>{data.name}</span>
-            <span className={womenCard.job}>{data.job}</span>
+            <img src={data?.img}/>
+            <span className={womenCard.name}>{data?.name}</span>
+            <span className={womenCard.job}>{data?.job}</span>
         </div>
     )
 }
