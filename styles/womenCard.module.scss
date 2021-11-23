@@ -1,0 +1,21 @@
+.container {
+    align-items: center;
+    background-color: #C13B77;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    width: 200px;
+
+    img {
+        border-radius: 20px;
+        margin-bottom: 20px;
+        width: 150px;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+}

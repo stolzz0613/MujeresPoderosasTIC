@@ -23,6 +23,7 @@ $font-quote: 'Reem Kufi', sans-serif;
     text-decoration: none;
     text-align: center;
 }
+
 @mixin options-title {
     color:$color-dark;
     font-family: $font-titles;
@@ -55,6 +56,7 @@ $font-quote: 'Reem Kufi', sans-serif;
         color: $color-dark;
         transition: all 0.3s ease-in;
         border:solid 1px $color-dark;
+        transition: all 1s ease-in;
     }
 }
 

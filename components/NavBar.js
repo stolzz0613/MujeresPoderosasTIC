@@ -28,6 +28,9 @@ const NavBar = () => {
                 <Link href='/news'>
                     <a href='#'>Informate</a>
                 </Link>
+                <Link href='/community'>
+                    <a href='#'>Comunidad</a>
+                </Link>
             </div>
         </>
 

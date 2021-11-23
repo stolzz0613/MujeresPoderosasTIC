@@ -1,0 +1,15 @@
+@import 'globals';
+@import 'breakpoints';
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @include media(tablet) {
+        flex-direction: row;
+    }
+}
