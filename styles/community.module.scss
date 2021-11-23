@@ -1,0 +1,37 @@
+@import 'globals';
+@import 'breakpoints';
+
+.containerImg {
+    background: #ff319c url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 630px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    svg{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    svg path {
+        fill: white;
+    }
+}
+
+.title {
+    @include primary-title;
+    font-size: 40px;
+}
+
+.containerGraphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 30px 0 50px;
+
+    @include media(tablet) {
+        flex-direction: row;
+    }
+}
