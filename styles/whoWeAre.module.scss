@@ -12,7 +12,7 @@
 
         h1 {
             @include primary-title;
-            padding: 40px 0 30px 0;
+            padding-top: 40px;
         }
 
         .container_text {
@@ -32,12 +32,41 @@
             p {
                 @include article-text;
                 text-align: justify;
+<<<<<<< HEAD
+=======
+            }
+        }
+    }
+}
+@include media(desktop-s) {
+    .generalContainer{
+        position: relative;
+
+        .containerImg {
+            display: block;
+            background: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-attachment: fixed;
+            background-size: cover;
+            height: 630px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            svg{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            svg path {
+                fill: #E9E0FF;
+>>>>>>> dd048b2b2df4d1c024a941fc567dcec9f2439075
             }
         }
     }
 }
 @include media(desktop-s) {
 
+<<<<<<< HEAD
     .generalContainer{
         position: relative;
 
@@ -85,5 +114,41 @@
                 }
             }
         }
+=======
+            h1 {
+                @include primary-title;
+                font-size: 40px;
+                bottom: 20px;
+                margin-left: 300px;
+                position: absolute;
+            }
+        }
+        .containerWho {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            h1{
+                display: none;
+            }
+
+            .container_text {
+                display: grid;
+                grid-template-columns: auto auto 1fr;
+                gap: 5%;
+                padding: 40px 60px 0px 60px;
+
+                h2 {
+                    text-align: end;
+                    font-size: 24px;
+                    margin-bottom: 80px;
+                }
+                p {
+                    @include article-text;
+                    font-size: 24px;
+                }
+            }
+        }
+>>>>>>> dd048b2b2df4d1c024a941fc567dcec9f2439075
     }
 }
