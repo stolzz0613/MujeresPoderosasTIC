@@ -3,7 +3,29 @@
 
 
 .container {
-    padding: 40px 0 30px 0;
+    .containerImg {
+        background-image: 
+        linear-gradient(
+            rgba(65, 51, 139, 0.4),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1626321267/oysmtusfkiheuirl0grj.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        height: 630px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        svg{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        svg path {
+            fill: white;
+        }
+    }
 
     &_cards {
         align-items: center;
@@ -21,7 +43,8 @@
 
     h1 {
         @include primary-title;
-        margin-bottom: 50px;
+        font-size: 40px;
+        margin-bottom: 100px;
     }
 
     a {
