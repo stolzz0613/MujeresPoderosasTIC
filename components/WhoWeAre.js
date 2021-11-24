@@ -11,18 +11,23 @@ function WhoWeAre() {
                 <div className={whoWeAre.container_text}>
                     <div className={whoWeAre.text}>
                         <p className={whoWeAre.text_title}>
-                            Mujeres poderosas somos hacedoras de cambios sociales, culturales, económicos y aportamos al desarrollo de latinoamerica con ciencia y tecnología.
+                            Mujeres Poderosas Tic, inició con un grupo de estudio originado por la necesidad de entender en ritmos y lenguajes diferentes los conceptos de programación. inicialmente 4 mujeres, hoy mas de 100 con estabilidad regular en los encuentros.
+                        </p>
+                        <p>
+                            Son mujeres con una mente curiosa de conocimiento en áreas STEAM en  ciencia y tecnología, con un alma dispuesta a ser transformada a través de una vida puesta al servicio de los demás.
                         </p>
                         <p>
                             Es un honor para nosotras ser parte de este movimiento que promueve la diversidad, inclusión y equidad en la Economía Digital. Aportamos nuestro tiempo, talento y posibilidades para hacer que este sea un mundo mejor.
                         </p>
                     </div>
                     <div className={whoWeAre.secondary_title}>
-                        <h2>Una Comunidad Social Colombiana que impacta la vida de las mujeres</h2>
+                        <h2>¡Una comunidad de mujeres de trasformar su vida!</h2>
                     </div>
                 </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E9E0FF" fillOpacity="1" d="M0,128L80,112C160,96,320,64,480,74.7C640,85,800,139,960,138.7C1120,139,1280,85,1360,58.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+            <div className={whoWeAre.containersvg}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E9E0FF" fillOpacity="1" d="M0,128L80,112C160,96,320,64,480,74.7C640,85,800,139,960,138.7C1120,139,1280,85,1360,58.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+            </div>
         </div>
     )
 }

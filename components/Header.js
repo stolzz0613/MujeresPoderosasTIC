@@ -38,7 +38,7 @@ function Header() {
                 ? <>
                     <i id={header.icon_login}className="bi bi-person-circle" onClick={openLogin}></i>
                     <Login isVisible={isVisible}/>
-                  </>
+                </>
                 : <Dropdown as={ButtonGroup}>
                     <style type="text/css">
                         {`

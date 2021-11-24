@@ -17,11 +17,10 @@ function index() {
 
     return (
         <div className={newsStyle.container}>
-            <h1>Noticias</h1>
+            <h1>Informate</h1>
             <div className={newsStyle.container_cards}>
                 {news.map((e,i) => <Card key={i} data={e}/>)}
             </div>
-            <h1>Publicaciones</h1>
             <div className={newsStyle.container_cards}>
                 {ownNews.map((e,i) => <Card key={i} data={e}/>)}
             </div>
