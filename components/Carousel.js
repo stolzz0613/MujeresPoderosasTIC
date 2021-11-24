@@ -28,8 +28,8 @@ const Carousel = () => {
             activeItemIndex={activeItemIndex}
             numberOfCards={imageNumber}
             gutter={20}
-            leftChevron={<i style={{ fontSize:'50px', color:'white'}} class='bi bi-arrow-left-circle-fill'></i>}
-            rightChevron={<i style={{ fontSize:'50px', color:'white'}} class='bi bi-arrow-right-circle-fill'></i>}
+            leftChevron={<i style={{ fontSize:'40px', color:'white'}} class='bi bi-arrow-left-circle-fill'></i>}
+            rightChevron={<i style={{ fontSize:'40px', color:'white'}} class='bi bi-arrow-right-circle-fill'></i>}
             chevronWidth={chevronWidth}
             infiniteLoop= {true}
             outsideChevron={false}

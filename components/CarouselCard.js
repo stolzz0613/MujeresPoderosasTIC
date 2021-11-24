@@ -11,12 +11,12 @@ export default function CarouselCard({ data }) {
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     position: 'relative',
-                    height: '300px',
+                    height: '350px',
                     borderRadius: '10px',
                 }}
             >
                 <div className={carouselCard.container}>
-                    {title.substring(0, 70) + '...'}
+                    {title.substring(0, 80) + '...'}
                 </div>
             </div>
         </a>

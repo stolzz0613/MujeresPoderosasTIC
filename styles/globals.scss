@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 
 //Variables
 $color-primary: #E9E0FF;
@@ -19,20 +19,26 @@ $font-quote: 'Reem Kufi', sans-serif;
     color: $color-secondary;
     font-family: $font-titles;
     font-size: 20px;
-    margin-bottom: 40px;
     text-decoration: none;
     text-align: center;
 }
 
 @mixin options-title {
-    color:$color-dark;
+    color:$color-light;
     font-family: $font-titles;
-    font-size: 18px;
+    font-size: 12px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: solid underline $color-highlight 3px;
+        color: white;
+    }
 }
 
 @mixin article-text{
     color: $color-dark;
     font-family: $font-text;
+    font-weight:400;
     font-size: 14px;
 }
 
