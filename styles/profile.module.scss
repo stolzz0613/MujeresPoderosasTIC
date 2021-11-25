@@ -7,13 +7,11 @@
     .containerImg{
         display: none;
     }
-
     .photo {
         display: flex;
         height: 200px;
         margin: 80px auto 50px;
         width: 200px;
-
         img {
             border-radius: 50%;
             width: 100%;
@@ -21,14 +19,12 @@
             object-fit: cover;
         }
     }
-
     .title {
         h1 {
             @include primary-title;
             font-size: 20px;
         }
     }
-
     .info {
         
         margin-bottom: 100px;
@@ -52,7 +48,6 @@
             }
         }
     }
-
     .buttons {
         display: flex;
         flex-direction: column;
@@ -73,8 +68,9 @@
 @include media(tablet){
     .container{
         padding: 0;
+
         .containerImg {
-            background-image: 
+            background-image:
                 linear-gradient(
                     rgba(65, 51, 139, 0.4),
                     rgba(0, 0, 0, 0.5)
@@ -110,11 +106,13 @@
         .title {
             h1 {
                 @include primary-title;
+                font-size: 40px;
+                padding-bottom: 50px;
             }
         }
 
         .info{
-            padding: 0 300px 0 300px;
+            padding: 0 200px 0 200px;
         }
 
         .info .data {

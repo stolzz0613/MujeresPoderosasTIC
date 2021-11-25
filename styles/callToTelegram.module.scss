@@ -11,8 +11,80 @@
     width: 100%;
 
     h1 {
-        @include primary-title;
-        padding-bottom: 20px;
+        @include article-text;
+        color: $color-light;
+        font-size: 16px;
+        letter-spacing: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 60%;
+        animation: move linear 2000ms infinite;
+        z-index: 99;
+        padding-bottom: 30px;
+    }
+
+/*Animación para rotar las sombras*/
+
+    @keyframes move {
+        0% {
+            text-shadow:
+                4px -4px 0 $color-highlight,
+                3px -3px 0 $color-highlight,
+                2px -2px 0 $color-highlight,
+                1px -1px 0 $color-highlight,
+                -4px 4px 0 $color-detales,
+                -3px 3px 0 $color-detales,
+                -2px 2px 0 $color-detales,
+                -1px 1px 0 $color-detales,
+            ;
+        }
+        25% {
+            text-shadow:
+                -4px -4px 0 $color-detales,
+                -3px -3px 0 $color-detales,
+                -2px -2px 0 $color-detales,
+                -1px -1px 0 $color-detales,
+                4px 4px 0 $color-highlight,
+                3px 3px 0 $color-highlight,
+                2px 2px 0 $color-highlight,
+                1px 1px 0 $color-highlight,
+            ;
+        }
+        50% {
+            text-shadow:
+                -4px 4px 0 $color-highlight,
+                -3px 3px 0 $color-highlight,
+                -2px 2px 0 $color-highlight,
+                -1px 1px 0 $color-highlight,
+                4px -4px 0 $color-detales,
+                3px -3px 0 $color-detales,
+                2px -2px 0 $color-detales,
+                1px -1px 0 $color-detales,
+            ;
+        }
+        75% {
+            text-shadow:
+                4px 4px 0 $color-detales,
+                3px 3px 0 $color-detales,
+                2px 2px 0 $color-detales,
+                1px 1px 0 $color-detales,
+                -4px -4px 0 $color-highlight,
+                -3px -3px 0 $color-highlight,
+                -2px -2px 0 $color-highlight,
+            ;
+        }
+        100% {
+            text-shadow:
+            4px -4px 0 $color-highlight,
+            3px -3px 0 $color-highlight,
+            2px -2px 0 $color-highlight,
+            1px -1px 0 $color-highlight,
+            -4px 4px 0 $color-detales,
+            -3px 3px 0 $color-detales,
+            -2px 2px 0 $color-detales,
+            -1px 1px 0 $color-detales,
+            ;
+        }
     }
     .content {
         align-items: center;
@@ -26,7 +98,6 @@
         @include button;
         align-items: center;
         display: flex;
-        height: 40px;
         justify-content: center;
         text-decoration: none;
         width: 200px;
@@ -36,11 +107,7 @@
 @include media(tablet){
     .container {
         h1 {
-            @include primary-title;
             font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 40px;
-            width: 70%;
         }
     }
 }

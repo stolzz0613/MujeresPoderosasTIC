@@ -57,6 +57,9 @@
         #icon_login {
             font-size: 30px;
             margin-right: 40px;
+            &:hover {
+                color: $color-detales;
+            }
         }
 
         .nameContainer{
