@@ -10,7 +10,7 @@
     .photo {
         display: flex;
         height: 200px;
-        margin: 80px auto 50px;
+        margin: 80px auto 50px ;
         width: 200px;
         img {
             border-radius: 50%;
@@ -22,11 +22,11 @@
     .title {
         h1 {
             @include primary-title;
-            font-size: 20px;
+            padding-bottom: 40px;
         }
     }
     .info {
-        
+
         margin-bottom: 100px;
         .data {
             display: flex;
@@ -35,7 +35,7 @@
             border-radius: 10px;
             justify-content: space-between;
             margin: 10px 0 10px;
-            padding: 3px 15px 3px 15px;
+            padding: 3px 10px 3px 10px;
             width: 100%;
 
             p {
@@ -52,15 +52,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 50px 0 300px;
+        margin: 20px 0 100px;
 
         .submit {
             @include button;
             font-size: 10px;
-
-            height: 30px;
             margin-bottom: 30px;
-            width: 60%;
+            width: 90%;
         }
     }
 }
@@ -126,9 +124,8 @@
         .buttons {
             .submit {
                 @include button;
-                width: 500px;
+                width: 50%;
             }
         }
     }
-    
 }

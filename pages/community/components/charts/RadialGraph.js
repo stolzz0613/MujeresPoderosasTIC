@@ -30,7 +30,7 @@ export default function RadialGraph() {
     };
 
     return (
-        <div style={{ width:'400px'}}>
+        <div style={{ width:'350px'}}>
             <PolarArea data={data} />
         </div>
     )
