@@ -12,37 +12,87 @@
 
         h1 {
             @include primary-title;
-            padding-top: 40px;
+
+            padding: 40px 0 40px 0;
+
+            @include media(tablet) {
+
+                font-size:40px;
+            }
         }
 
         .container_text {
+            align-items: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
             padding: 0px 40px 0px 40px;
+
+            p {
+                @include article-text;
+
+                text-align: justify;
+            }
+        }
+        .secondary_title{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
 
             h2 {
                 @include article-text;
+
                 color: $color-highlight;
-                text-align: center;
                 font-weight:800;
                 padding: 20px 10px 0 10px;
+                text-align: center;
                 word-spacing: 4px;
+                z-index: 20;
             }
-            p {
-                @include article-text;
-                text-align: justify;
+            img{
+                display: flex;
+                width: 60%;
+            }
+            svg{
+                position: absolute;
+                padding-top: 30%;
+
             }
         }
     }
 }
+@include media(tablet) {
+    .generalContainer{
+        .containerWho {
+            .secondary_title{
+                position: relative;
+
+                img{
+                    display: flex;
+                    width: 70%;
+                }
+                svg{
+                    position: absolute;
+                    padding-top: 35%;
+                }
+            }
+        }
+    }
+}
+
+
 @include media(desktop-s) {
     .generalContainer{
         position: relative;
 
         .containerImg {
             display: block;
-            background: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background:
+            linear-gradient(
+                rgba(114, 70, 170, 0.226),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
             background-attachment: fixed;
             background-size: cover;
             height: 630px;
@@ -51,22 +101,22 @@
             position: relative;
             width: 100%;
             svg{
-                position: absolute;
                 bottom: 0;
+                position: absolute;
                 width: 100%;
             }
             svg path {
                 fill: #E9E0FF;
             }
-
+        }
             h1 {
                 @include primary-title;
-                font-size: 40px;
+
                 bottom: 20px;
-                margin-left: 300px;
+                font-size: 40px;
+                margin-left: 200px;
                 position: absolute;
             }
-        }
         .containerWho {
             display: flex;
             flex-direction: column;
@@ -80,16 +130,30 @@
                 display: grid;
                 grid-template-columns: auto auto 1fr;
                 gap: 5%;
-                padding: 40px 60px 0px 60px;
+                padding: 0px 60px;
 
-                h2 {
-                    text-align: end;
-                    font-size: 24px;
-                    margin-bottom: 80px;
-                }
                 p {
                     @include article-text;
+
+                    font-size: 20px;
+                }
+            }
+            .secondary_title{
+                position: relative;
+
+                img{
+                    height: auto;
+                    width: 90%;
+                }
+                svg{
+                    position: absolute;
+                    padding-top: 50%;
+                }
+                h2 {
                     font-size: 24px;
+                    text-align: end;
+                    margin-bottom: 80px;
+                    padding: 30px;
                 }
             }
         }

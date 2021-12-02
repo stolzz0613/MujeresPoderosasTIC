@@ -28,7 +28,7 @@
         text-decoration: none;
         word-spacing: 3px;
     }
- 
+
     .submit {
         @include button;
         height: 30px;
@@ -38,14 +38,11 @@
     @include media(tablet){
 
         .title {
-            @include options-title;
-            color:$color-dark;
             font-size: 20px;
         }
 
         .submit {
             @include button;
-            height: 40px;
             width: 200px;
         }
     }
