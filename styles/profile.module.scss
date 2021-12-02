@@ -4,92 +4,131 @@
 .container {
     padding: 0 80px 0 80px;
 
+    .containerImg{
+        display: none;
+    }
     .photo {
         display: flex;
         height: 200px;
-        margin: 80px auto 50px;
+        margin: 80px auto 50px ;
         width: 200px;
-
         img {
             border-radius: 50%;
-            width: 100%;
             height: 100%;
             object-fit: cover;
+            width: 100%;
         }
     }
-
     .title {
         h1 {
             @include primary-title;
-            font-size: 20px;
+
+            padding-bottom: 40px;
         }
     }
-
     .info {
+
         margin-bottom: 100px;
         .data {
-            display: flex;
             background-color: $color-primary;
             border: solid 1px;
             border-radius: 10px;
+            display: flex;
             justify-content: space-between;
             margin: 10px 0 10px;
-            padding: 3px 15px 3px 15px;
+            padding: 3px 10px 3px 10px;
             width: 100%;
 
             p {
                 font-weight: bold;
-                margin-bottom: 0;
                 font-size: 9px;
+                margin-bottom: 0;
+
                 span {
                     font-weight: normal;
                 }
             }
         }
     }
-
     .buttons {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin: 50px 0 300px;
+        margin: 20px 0 100px;
 
         .submit {
             @include button;
-            font-size: 10px;
 
-            height: 30px;
+            font-size: 10px;
             margin-bottom: 30px;
-            width: 60%;
+            width: 90%;
         }
     }
+}
 
-    @include media(tablet){
+@include media(tablet){
+    .container{
+        padding: 0;
+
+        .containerImg {
+            background-image:
+                linear-gradient(
+                    rgba(65, 51, 139, 0.4),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url('https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/nicole-wolf--xTBn1YBrTE-unsplash.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            display: block;
+            height: 630px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            svg{
+                bottom: 0;
+                position: absolute;
+                width: 100%;
+            }
+            svg path {
+                fill: white;
+            }
+        }
 
         .photo {
             display: flex;
             height: 300px;
-            margin: -150px auto 70px;
+            margin: -80px auto 70px;
+            position: relative;
             width: 300px;
+            z-index: 9;
         }
 
         .title {
             h1 {
                 @include primary-title;
+
+                font-size: 40px;
+                padding-bottom: 50px;
             }
+        }
+
+        .info{
+            padding: 0 200px 0 200px;
         }
 
         .info .data {
             p {
                 font-weight: bold;
-                margin-bottom: 0;
                 font-size: 14px;
+                margin-bottom: 0;
             }
         }
 
         .buttons {
             .submit {
                 @include button;
+                width: 50%;
             }
         }
     }

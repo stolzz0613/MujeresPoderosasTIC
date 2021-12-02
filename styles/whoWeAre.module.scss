@@ -5,96 +5,156 @@
     position:relative;
 
     .containerImg {
-        background: #ff319c url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-        background-attachment: fixed;
-        background-size: cover;
-        height: 630px;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        width: 100%;
-        svg{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-        svg path {
-            fill: #E9E0FF;
-        }
+        display: none;
     }
     .containerWho {
-        background-color: #E9E0FF;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        background-color: $color-primary;
 
         h1 {
-            color: $color-secondary;
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            font-size: 30px;
-            margin-left: 150px;
+            @include primary-title;
+
+            padding: 40px 0 40px 0;
+
+            @include media(tablet) {
+
+                font-size:40px;
+            }
         }
 
         .container_text {
             align-items: center;
             display: flex;
-            gap: 10%;
-            padding: 40px 60px 40px 60px;
-            width: 100%;
+            flex-direction: column;
+            padding: 0px 40px 0px 40px;
 
-            .text {
-                .text_title {
-                    width: 100%;
-                }
-            }
-
-            h2 {
-                color: $color-highlight;
-                text-align: end;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15px;
-                font-weight: bold;
-                padding-right: 50px;
-                margin-bottom: 80px;
-            }
             p {
                 @include article-text;
-                font-family: 'Roboto', sans-serif;
-                font-size: 15px;
-                font-weight: 600;
-            }
 
-            @include media(desktop-s) {
-                h2 {
-                    color: $color-highlight;
-                    text-align: right;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 24px;
-                    font-weight: bold;
-                    padding-bottom: 100px;
-                    padding-righ: 0;
+                text-align: justify;
+            }
+        }
+        .secondary_title{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            h2 {
+                @include article-text;
+
+                color: $color-highlight;
+                font-weight:800;
+                padding: 20px 10px 0 10px;
+                text-align: center;
+                word-spacing: 4px;
+                z-index: 20;
+            }
+            img{
+                display: flex;
+                width: 60%;
+            }
+            svg{
+                position: absolute;
+                padding-top: 30%;
+
+            }
+        }
+    }
+}
+@include media(tablet) {
+    .generalContainer{
+        .containerWho {
+            .secondary_title{
+                position: relative;
+
+                img{
+                    display: flex;
+                    width: 70%;
                 }
-                p {
-                    @include article-text;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 22px;
-                    font-weight: 600;
-                    margin-bottom: 20px;
+                svg{
+                    position: absolute;
+                    padding-top: 35%;
                 }
             }
         }
-        @include media(desktop-m) {
+    }
+}
+
+
+@include media(desktop-s) {
+    .generalContainer{
+        position: relative;
+
+        .containerImg {
+            display: block;
+            background:
+            linear-gradient(
+                rgba(114, 70, 170, 0.226),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-attachment: fixed;
+            background-size: cover;
+            height: 630px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            svg{
+                bottom: 0;
+                position: absolute;
+                width: 100%;
+            }
+            svg path {
+                fill: #E9E0FF;
+            }
+        }
+            h1 {
+                @include primary-title;
+
+                bottom: 20px;
+                font-size: 40px;
+                margin-left: 200px;
+                position: absolute;
+            }
+        .containerWho {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            height: 200px;
-            h1 {
-                color: $color-secondary;
-                font-family: 'Roboto', sans-serif;
-                text-decoration: none;
-                font-size: 40px;
-                margin-left: 300px;
+            position: relative;
+
+            h1{
+                display: none;
+            }
+
+            .container_text {
+                display: grid;
+                grid-template-columns: auto auto 1fr;
+                gap: 5%;
+                padding: 0px 60px;
+
+                p {
+                    @include article-text;
+
+                    font-size: 20px;
+                }
+            }
+            .secondary_title{
+                position: relative;
+
+                img{
+                    height: auto;
+                    width: 90%;
+                }
+                svg{
+                    position: absolute;
+                    padding-top: 50%;
+                }
+                h2 {
+                    font-size: 24px;
+                    text-align: end;
+                    margin-bottom: 80px;
+                    padding: 30px;
+                }
             }
         }
     }

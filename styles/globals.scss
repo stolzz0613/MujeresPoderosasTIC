@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 
 //Variables
 $color-primary: #E9E0FF;
@@ -9,6 +9,7 @@ $color-light: #FFFFFF;
 $color-highlight: #C13B77;
 $color-secondary: #54338B;
 $color-dark: #000000;
+$color-detales: #81e4df;
 $font-name:'Rochester', cursive;
 $font-titles:'Roboto', sans-serif;
 $font-text:'Open Sans', sans-serif;
@@ -18,21 +19,29 @@ $font-quote: 'Reem Kufi', sans-serif;
 @mixin primary-title{
     color: $color-secondary;
     font-family: $font-titles;
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 900;
     text-decoration: none;
     text-align: center;
+    text-shadow: 2px 2px #ffffff, 3px 3px #f3f3f2, 6px 6px $color-detales;
 }
 
 @mixin options-title {
-    color:$color-dark;
+    color:$color-light;
     font-family: $font-titles;
-    font-size: 18px;
+    font-size: 12px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: solid underline $color-detales 3px;
+        color: white;
+    }
 }
 
 @mixin article-text{
     color: $color-dark;
     font-family: $font-text;
+    font-weight:400;
     font-size: 14px;
 }
 
@@ -50,13 +59,12 @@ $font-quote: 'Reem Kufi', sans-serif;
     color: $color-light;
     font-size: 15px;
     font-family: $font-text;
+    height: 40px;
 
     &:hover {
-        background-image: linear-gradient(to right,$color-primary,$color-light);
+        background: $color-detales;
         color: $color-dark;
-        transition: all 0.3s ease-in;
-        border:solid 1px $color-dark;
-        transition: all 1s ease-in;
+        transition: all 0.4s ease-in;
     }
 }
 

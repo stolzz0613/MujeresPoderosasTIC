@@ -3,12 +3,14 @@
 
 .container {
     @include quote-text;
+
     margin: 50px auto;
     width: 200px;
 }
 @include media(tablet){
     .container {
-    font-size: 20px;
-    width: 600px;
+        font-size: 25px;
+        padding-bottom: 100px;
+        width: 800px;
     }
 }

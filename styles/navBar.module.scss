@@ -3,35 +3,32 @@
 
 .topBar{
     background-color: $color-secondary;
-    display: grid;
-    justify-content: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
     padding: 10px 0 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    width: 100%;
 
     a {
         @include options-title;
-        text-decoration: none;
-        word-spacing: 3px;
-        text-align: center;
+
         padding: 2px;
+        text-align: center;
+        word-spacing: 3px;
     }
-    @include media(tablet){
-        display: inline-flex;
-        width: 100%;
+}
+@include media(tablet){
+    .topBar{
+        display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        padding: 10px 0 10px 0;
+        margin-top: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
         a {
-            @include options-title;
-            color: white;
-            text-decoration: none;
-            word-spacing: 3px;
-            &:hover {
-                text-decoration: solid underline $color-highlight 3px;
-                color: white;
-            }
+            font-size: 20px;
         }
     }
 }

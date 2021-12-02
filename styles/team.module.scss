@@ -6,12 +6,13 @@
 
     h1 {
         @include primary-title;
-        margin-top: 40px;
+
+        margin-bottom: 50px;
     }
     .container_images {
         display: flex;
-        justify-content: space-evenly;
         flex-wrap: wrap;
+        justify-content: space-evenly;
         margin: 0px 20px 0px 20px;
 
         .container_image{
@@ -39,21 +40,20 @@
     }
     .container2 {
         background-color: $color-dark;
-        position: absolute;
-        top: 0%;
-        opacity: 0%;
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        opacity: 0%;
+        position: absolute;
         padding: 10px;
+        top: 0%;
         transform: translateY(-105%);
+        width: 100%;
 
         p{
-            text-align: center;
             color: $color-light;
             font-size: 8px;
+            text-align: center;
         }
 
         .icon {
@@ -63,8 +63,8 @@
 
             a {
                 align-self: flex-end;
-                font-size: 15px;
                 color: $color-light;
+                font-size: 15px;
             }
         }
     }
@@ -72,11 +72,10 @@
 
 @include media(tablet){
     .container{
-        margin-bottom: 200px;
+        padding-top: 80px;
         h1 {
-            @include primary-title;
-            font-size: 30px;
-            padding-bottom: 40px;
+            font-size: 40px;
+            padding-bottom: 60px;
         }
         .container_images {
             margin-bottom: 200px;

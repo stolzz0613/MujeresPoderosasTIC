@@ -38,26 +38,28 @@
 
         &_submit {
             @include button;
+
             font-size: 10px;
             height: 30px;
             width: 150px;
         }
         &_delete{
             @include button;
+
             background-color: $color-primary;
             border: solid 1px $color-highlight;
             color: $color-dark;
             font-size: 10px;
             height: 30px;
-            width: 150px;
             margin: 20px;
+            width: 150px;
         }
         &_edit{
             @include button;
+
             font-size: 10px;
             height: 30px;
             width: 150px;
-            margin: 20px;
         }
     }
 }

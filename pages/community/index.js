@@ -19,7 +19,7 @@ export default function index() {
                 <RadarGraph />
             </div>
             <h1 className={community.title}>
-                Conoce las historias de mujeres que hacen parte de nuestra comunidad...
+                Mujer Inspiradora
             </h1>
             <WomenList />
             <div style={{marginBottom:'60px'}}>
