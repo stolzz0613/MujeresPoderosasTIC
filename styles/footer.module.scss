@@ -2,15 +2,15 @@
 @import 'breakpoints';
 
 .container {
+    align-items: center;
     background-color: $color-secondary;
     color: $color-light;
     display: flex;
     flex-direction: column;
     font-size: 7px;
-    align-items: center;
-    text-align: center;
     gap: 5px;
     padding: 10px 5%;
+    text-align: center;
 
     h4{
         font-size: 10px;
@@ -26,8 +26,8 @@
     }
 
     .social {
-        font-size: 15px;
         display: flex;
+        font-size: 15px;
         gap: 20px;
         padding-bottom: 10px;
 
@@ -50,10 +50,9 @@
             margin: 0;
         }
         .social {
-            font-size: 23px;
             align-items: center;
+            font-size: 23px;
             padding-bottom: 0px;
         }
-
     }
 }

@@ -4,24 +4,25 @@
 .container {
     align-items: center;
     background-color: $color-light;
+    box-sizing: border-box;
     display: flex;
+    gap: 20px;
     height: 20px;
     justify-content: space-between;
-    padding: 30px 30px 0px 30px;
     margin:0;
-    gap: 20px;
-    box-sizing: border-box;
+    padding: 30px 30px 0px 30px;
 
     #icon_login {
-        display: flex;
         align-items: flex-end;
-        cursor: pointer;
-        font-size: 25px;
         color: rgb(161, 159, 159);
+        cursor: pointer;
+        display: flex;
+        font-size: 25px;
         padding-top: 10px;
     }
     #title_login {
         @include article-text;
+
         color:$color-dark;
         display: flex;
         cursor: pointer;

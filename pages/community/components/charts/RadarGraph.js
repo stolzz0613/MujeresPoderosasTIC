@@ -34,7 +34,7 @@ export default function RadarGraph() {
     };
 
     return (
-        <div style={{ width:'350px'}}>
+        <div style={{ width:'320px'}}>
             <Radar data={data} />
         </div>
     )
